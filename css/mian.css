@@ -1,0 +1,164 @@
+/* Basic Reset */
+html{
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+*,
+*:after,
+*:before{
+    box-sizing: border-box
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both; 
+    }
+.hidden{
+    display: none;
+}
+button{
+    background: #333;
+    color: rgb(254, 254, 254);
+    padding: 0.5rem;
+    border: 1px solid #222;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* Navigation Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(254, 254, 254);
+    color: #222;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.fasco h1 {
+    font-size: 2rem;
+}
+
+/* Navigation (Mobile-First) */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.sign-up {
+    
+    background: #222;
+    border: none;
+    padding: 10px 15px;
+    color: rgb(254, 254, 254);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    margin-top: 0;
+    background: #222;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu li {
+    list-style: none;
+    padding: 1rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(254, 254, 254);
+    display: block;
+}
+.menu.active {
+    display: flex; /* Show when active */
+}
+
+/* banner part */
+#banner{
+    padding: 2rem 3rem;
+    position: relative;
+}
+
+.brands{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem auto;
+}
+
+.banner-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items */
+    margin: 2rem; 
+}
+.banner-center h2{
+    font-size: 2rem;
+}
+.box-middle{
+    margin: 0 1rem;
+}
+
+
+
+
+
+
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    html{
+        font-size: 16px;
+    }
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    .menu {
+        display: flex; /* Show menu by default on desktop */
+        flex-direction: row;
+        position: static;
+        background: none;
+        box-shadow: none;
+        width: auto;
+    }
+    .menu li a {
+        color: #222
+    }
+    .large{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+   
+    
+    
+    .hidden{
+        display: flex;
+    }
+    .sign-up {
+        display: block; /* Show sign-up button on larger screens */
+    }
+
+    .menu li {
+        padding: 0 15px;
+    }
+}

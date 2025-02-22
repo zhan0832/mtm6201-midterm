@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mian.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="fasco"><h1>FASCO</h1></div>
+        <nav class="nav">
+            
+            <div><button class="hamburger">☰</button>
+                
+                <ul class="menu">
+                    <li><a href="#newarrivals">Home</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#newarrivals">New Arrivals</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#">Sign in</a></li>
+                </ul>
+                    
+            </div>
+            <button class="sign-up button">Sign up</button>  
+        </nav>
+    </header>
+    <main>
+        <!-- Banner part -->
+        <div id="banner" class="large">
+            <img class="hidden clearfix" src="./images/banner-1.png" alt="bannerpicture">
+            <div class="box-middle">
+                <img class=" clearfix" src="./images/banner-2.png" alt="bannerpicture">
+                <div class="banner-center">
+                    <h2>ULTIMATE</h2>
+                    <h2>SALE</h2>
+                    <P>NEW COLLECTION</P>
+                    <button class="button">Shop Now</button>
+                    
+                </div> 
+                <img src="./images/banner-4.png" alt="bannerpicture">
+            </div>  
+            <img class="hidden clearfix" src="./images/banner-3.png" alt="bannerpicture">  
+        </div>
+        <div class="brands">
+            <p>CHANEL</p>
+            <p>LOUIS VUITTON</p>
+            <p>PRADA</p>
+            <p>Calvin Klein</p>
+            <p>DENIM</p>
+        </div>
+        <div id="deals" class="box">
+            <div>
+                <h2>Deals Of The Month</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <button class="button">Buy Now</button>
+                <img src="./images/timer.png" alt="timer">
+            </div>
+
+
+        </div>
+
+        <div id="newarrivals" class="box clearfix">
+
+        </div>
+        <div id="packages" class="box clearfix"></div>
+
+        <div id="follow-us" class="box clearfix"></div>
+    </main>
+    <footer>
+        <div><p>FASCO</p></div>
+        <nav>
+            <div><button class="hamburger">☰</button>
+                <ul class="menu">
+                    <li><a href="#suppot-center">Suppot Center</a></li>
+                    <li><a href="#invoicing">Invoicing</a></li>
+                    <li><a href="#contract">Contract</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                </ul>
+                <button class="sign-up">Sign up</button>
+            </div>  
+        </nav>
+        <p>&copy; 2022                    FASCO. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+    
+    
+</body>
+</html>
