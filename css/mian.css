@@ -28,6 +28,7 @@ button{
     border: 1px solid #222;
     border-radius: 5px;
     font-size: 1rem;
+    margin-bottom: 2rem;
 }
 img{
     width: 100%;
@@ -122,11 +123,36 @@ header {
     background-color: rgb(244, 245, 242);
 
 }
-.dotm{
-    padding: 3rem 0;
+.timer{
+    max-width: 200px;
 }
-.dotm-img{
+.dotm{
+    padding: 2rem 0;
+}
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+/* slide container animation */
+.dotm-img {
+    display: flex;
+    width: 100%; 
     padding: 3rem;
+}
+.dotm-img:hover{
+    animation: slide 5s linear;
+}
+.slide {
+    padding: 5px;
+    width: 60%;
+    max-height: 350px;  
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-30%); }
+    66% { transform: translateX(-60%); }
+    100% { transform: translateX(0%); }
 }
 /* new arrivals part */
 
@@ -165,7 +191,7 @@ header {
     .hidden{
         display: flex;
    
-        flex: 1 1 30%; /* 让它们的大小与中间图片一致 */
+        flex: 1 1 30%; 
         max-width: 100%;
     }
 
@@ -179,10 +205,10 @@ header {
 
     .large > img,
     .large > .box-middle {
-        flex: 1 1 30%; /* 让所有子元素（左右图片 + 中间）等比例缩放 */
+        flex: 1 1 30%; 
         max-width: 100%;
     }
-}
+
     .sign-up {
         display: block; /* Show sign-up button on larger screens */
     }
@@ -190,3 +216,11 @@ header {
     .menu li {
         padding: 0 15px;
     }
+    /* deal part */
+    #deals{
+        display: flex;
+    }
+    .dotm{
+        width: 40%;
+    }
+}
