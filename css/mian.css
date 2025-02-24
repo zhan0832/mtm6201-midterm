@@ -1,3 +1,11 @@
+/* root variables*/
+:root{
+    --primary-color: #222;
+    --secondary-color:rgb(254,254,254);
+    --red-color: red;
+    --grey-color: rgb(122, 122, 122);
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 /* Basic Reset */
 html{
     font-family: "Open Sans", sans-serif;
@@ -5,7 +13,6 @@ html{
     box-sizing: border-box;
 }
 body {
-    
     margin: 0 auto;
     padding: 0;}
 *,
@@ -21,15 +28,40 @@ body {
 .hidden{
     display: none;
 }
-button{
-    background: #333;
-    color: rgb(254, 254, 254);
-    padding: 0.5rem;
-    border: 1px solid #222;
+/* buttons */
+button, .button {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 3rem;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     font-size: 1rem;
     margin-bottom: 2rem;
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
 }
+
+button:hover, .button:hover {
+    background: #444;
+    transform: scale(1.1);
+}
+
+.button2 {
+    background: #f3f3f3;
+    color: var(--grey-color);
+    padding: 0.5rem 1.5rem;
+    box-shadow: var(--box-shadow);
+    border: none;
+    transition: all var(--transition-speed) ease;
+    margin: 0 1rem;
+}
+
+.button2:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+/* images */
 img{
     width: 100%;
     height: auto;
@@ -37,22 +69,20 @@ img{
 h2{
     font-size: 2.5rem;
 }
+.box{
+    box-shadow: 0px 4px 20px rgba(159, 158, 158, 0.2);
+}
 
 /* Navigation Styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(254, 254, 254);
-    color: #222;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 2rem 0;
     position: relative;
 }
-
-.fasco h1 {
-    font-size: 2rem;
-}
-
 /* Navigation (Mobile-First) */
 .nav {
     display: flex;
@@ -60,20 +90,19 @@ header {
 }
 
 .sign-up {
-    
-    background: #222;
+    background: var(--primary-color);
     border: none;
-    
-    color: rgb(254, 254, 254);
+    color: var(--secondary-color);
     border-radius: 5px;
     cursor: pointer;
+    margin: 0;
 }
 
 .hamburger {
     background: none;
     border: none;
-    font-size: 2rem;
-    color: #333;
+    font-size: 1.5rem;
+    color: var(--primary-color);
     cursor: pointer;
 }
 
@@ -81,10 +110,12 @@ header {
     display: none; /* Hidden by default */
     flex-direction: column;
     position: absolute;
-    margin-top: 0;
-    background: #222;
+    background: var(--primary-color);
     border-radius: 5px;
     text-align: center;
+}
+.menu.active {
+    display: flex;
 }
 
 .menu li {
@@ -94,11 +125,8 @@ header {
 
 .menu li a {
     text-decoration: none;
-    color: rgb(254, 254, 254);
+    color: var(--secondary-color);
     display: block;
-}
-.menu.active {
-    display: flex; /* Show when active */
 }
 
 /* banner part */
@@ -114,6 +142,9 @@ header {
     flex-direction: column;
     align-items: center; /* Center items */
     margin: 2rem; 
+}
+.banner-center> *{
+    flex-grow: 1;
 }
 .banner-center h2{
     font-size: 2rem;
@@ -155,22 +186,121 @@ header {
     100% { transform: translateX(0%); }
 }
 /* new arrivals part */
+#newarrivals{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    margin-bottom: 3rem;
+}
+.newarrivalsbox{
+    flex: 1 1 calc(50% - 20px); 
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.newarrivalsbox:hover{
+    box-shadow: var(--box-shadow)
+}
+.h2center{
+    text-align-last: center;
+    margin: 3rem;
+}
+.grey{
+    color: var(--grey-color);
+    font-size: 0.8rem;
+}
+.red{
+    color: var(--red-color);
+    font-size: 0.8rem;
+}
+.newdress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* package part */
+#packages{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 3rem 0;
+    background-image: url('../images/peaky.png');
+    background-size: cover;
+    background-position: center;
+    margin: 3rem 0;
+}
+.right{
+   
+    width: 32%;
+    margin-right: 3rem;
+    margin-left: auto;
+}
+.icon{
+    height: 3rem;
+    width: 3rem;
+    align-self: center;
+}
+/* follow us */
+#follow-us{
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;   
+}
+#follow-us img:hover{
+    transform: scale(1.2);
+    box-shadow: var(--box-shadow);
+    
 
+}
+/* customers part */
+.customers{
+    padding: 3rem 0;
+}
 
-
-
-
-
-
-
+.a1> .brands{
+    padding: 3rem;
+    margin: 0 3rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+.person-photo{
+    width: 200px;
+    margin-right: 25px;
+}
+/* subscribe part */
+.subscribe{
+    padding: 4rem;
+    position: relative;  
+}
+.subscribetext{
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+.subscribe .grey{
+    padding-bottom: 3rem;
+}
 .margin{
     margin: 0 3rem;
 }
-
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+.copyright{
+    align-self: center;
+}
 /* Desktop Styles */
 @media (min-width: 768px) {
     html{
         font-size: 16px;
+    }
+    .margin{
+        margin: 0 8rem;
     }
     .hamburger {
         display: none; /* Hide hamburger on larger screens */
@@ -189,29 +319,23 @@ header {
     }
     
     .hidden{
-        display: flex;
-   
-        flex: 1 1 30%; 
-        max-width: 100%;
+        display: flex;    
     }
 
     .large {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        max-height: 800px;
         gap: 1rem;
     }
 
-    .large > img,
-    .large > .box-middle {
-        flex: 1 1 30%; 
+    .large > * {
+        flex: 1 1 calc(33.3% - 20px); 
         max-width: 100%;
     }
 
-    .sign-up {
-        display: block; /* Show sign-up button on larger screens */
-    }
+    
 
     .menu li {
         padding: 0 15px;
@@ -223,4 +347,18 @@ header {
     .dotm{
         width: 40%;
     }
+    /* new arrivals part */
+    .newarrivalsbox{
+        flex: 1 1 calc(33.3% - 20px); 
+    }
+    /* customer say part */
+    .a1{
+        display: flex;
+    }
+    /* subscribe part */
+    .subscribetext{
+        top: 20%;
+    }
+
+
 }
