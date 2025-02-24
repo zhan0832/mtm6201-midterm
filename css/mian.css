@@ -4,7 +4,7 @@
     --secondary-color:rgb(254,254,254);
     --red-color: red;
     --grey-color: rgb(122, 122, 122);
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 /* Basic Reset */
 html{
@@ -127,6 +127,10 @@ header {
     text-decoration: none;
     color: var(--secondary-color);
     display: block;
+}
+a:hover{
+    text-shadow: var(--box-shadow);
+    transform: scale(1.2);
 }
 
 /* banner part */
@@ -264,7 +268,10 @@ header {
 .a1> .brands{
     padding: 3rem;
     margin: 0 3rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
+}
+.a1> .brands:hover {
+    transform: scale(1.2);
 }
 .person-photo{
     width: 200px;
