@@ -85,39 +85,28 @@ header {
 }
 /* Navigation (Mobile-First) */
 .nav {
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 
-.sign-up {
-    background: var(--primary-color);
-    border: none;
-    color: var(--secondary-color);
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0;
-}
 
 .hamburger {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--primary-color);
     cursor: pointer;
 }
-
+.nav{
+    position: relative;
+}
 .menu {
     display: none; /* Hidden by default */
     flex-direction: column;
     position: absolute;
     background: var(--primary-color);
     border-radius: 5px;
-    text-align: center;
+    z-index: 10;
 }
-.menu.active {
-    display: flex;
-}
-
 .menu li {
     list-style: none;
     padding: 1rem;
@@ -125,30 +114,44 @@ header {
 
 .menu li a {
     text-decoration: none;
+    padding: 0.5rem 1rem;
     color: var(--secondary-color);
     display: block;
 }
-a:hover{
+.menu li a:hover,
+.menu li a:focus{
+    background: var(--primary-color);
+    border: none;
+    color: var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
     text-shadow: var(--box-shadow);
-    transform: scale(1.2);
 }
 
+
+
+.hamburger:active + .menu {
+    max-height: 200px; 
+    overflow: visible;
+}
 /* banner part */
 .brands{
     font-weight: bold;
     display: flex;
     justify-content: space-between;
+
     padding: 3rem 0;
 }
 
-.banner-center{
+.box-middle{
     display: flex;
     flex-direction: column;
     align-items: center; /* Center items */
-    margin: 2rem; 
+    justify-content: space-between;
 }
-.banner-center> *{
+.box-middle> *{
     flex-grow: 1;
+
 }
 .banner-center h2{
     font-size: 2rem;
@@ -281,6 +284,7 @@ a:hover{
 .subscribe{
     padding: 4rem;
     position: relative;  
+    border-bottom: 2px solid lightgray;
 }
 .subscribetext{
     width: 40%;
@@ -321,10 +325,11 @@ a:hover{
         box-shadow: none;
         width: auto;
     }
+    
     .menu li a {
         color: #222
     }
-    
+    /* banner */
     .hidden{
         display: flex;    
     }
@@ -332,21 +337,12 @@ a:hover{
     .large {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
         max-height: 800px;
-        gap: 1rem;
-    }
-
-    .large > * {
-        flex: 1 1 calc(33.3% - 20px); 
-        max-width: 100%;
+        gap: 2rem;
     }
 
     
-
-    .menu li {
-        padding: 0 15px;
-    }
     /* deal part */
     #deals{
         display: flex;
