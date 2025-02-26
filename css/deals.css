@@ -134,9 +134,9 @@ img{
     display: block;
     z-index: 1;
 }
-.dropdown-content a:hover {background-color: var(--primary-color); color: var(--secondary-color);}
+.dropdown-content a:hover, .dropdown-content a:focus {border-bottom:1px solid var(--primary-color);}
 .dropdown:hover .dropdown-content {display: block;}
-    .dropdown:hover .dropbtn{background-color: var(--primary-color); color: var(--secondary-color) }
+.dropdown:hover .dropbtn, .dropdown:focus .dropbtn{background-color: var(--primary-color); color: var(--secondary-color) }
 
 /* products */
 .p-image{
@@ -205,7 +205,8 @@ img{
 .greybox{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: lightgray;
     padding: 2rem;
 }   
