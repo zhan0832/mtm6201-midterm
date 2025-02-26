@@ -9,28 +9,123 @@
 </head>
 <body>
     <header class="margin">
-        <Nav>
+        <Nav class="header">
             <div><h1>FASCO</h1></div>
-            <nav class="nav" aria-label="Main Navigation">
-                <div><button class="hamburger">☰</button>        
-                    <ul class="menu" aria-label="Toggle Menu">
-                        <li><a href="./index.html" aria-label="Navigation Menu">Home</a></li>
-                        <li><a href="#Shop">Shop</a></li>
-                        <li><a href="#packages">Products</a></li>
-                        <li><a href="#pages">Sign in</a></li>
-                    </ul>        
-                </div> 
-                <div>
-                    <i class="fas fa-search"></i>  
-                    <i class="fas fa-star"></i>     
-                    <i class="fas fa-shopping-cart"></i>  
-                    <i class="fas fa-user"></i> 
+            <nav class="dropdown" aria-label="Main Navigation">
+                <div><button class="dropbtn">☰</button>        
+                    <div class="dropdown-content" aria-label="Toggle Menu">
+                        <a href="./index.html" aria-label="Navigation Menu">Home</a>
+                        <a href="#Shop">Shop</a>
+                        <a href="#packages">Products</a>
+                        <a href="#pages">Sign in</a>
+                    </div>        
                 </div> 
             </nav>
+            <div class="search-icon hidden">
+                <i class="fas fa-search"></i>  
+                <i class="fas fa-star"></i>     
+                <i class="fas fa-shopping-cart"></i>  
+                <i class="fas fa-user"></i> 
+            </div>
         </Nav>
     </header>
     <main>
-        <div></div>
+        <!-- product details -->
+        <div class="productsdl margin">
+            <div class="p-image">
+                <div class="swiper-container">
+                    <div class="swiper ">
+                        <img src="./images/div.swiper-slide-5.png" alt="dress details">
+                        <img src="./images/div.swiper-slide-5.png" alt="dress details">
+                        <img src="./images/div.swiper-slide-5.png" alt="dress details">
+                        <img src="./images/div.swiper-slide-5.png" alt="dress details">
+                        <img src="./images/div.swiper-slide-5.png" alt="dress details">
+                        <img src="./images/div.swiper-slide-5.png" alt="dress details">
+                        <img src="./images/div.swiper-slide-5.png" alt="dress details">
+                    </div>
+                </div>
+                
+                <div>
+                    <img class="clearfix" src="./images/follow-us-2.png" alt="blue sweater">
+                </div>
+            </div>
+            <div class="p-inf">
+                <p class="grey">fasco</p>
+                <div class="flex">
+                    <h2 class="blod">Denim Jacket</h2>
+                    <i class="fa-regular fa-star alineselfcenter"></i>
+
+                </div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>(3)</span>
+                </div>
+                <div class="flex1 blod">
+                    <h3>$39.00</h3>
+                    <p class="grey"><s>$59.00</s></p>
+                    <p class="save">SAVE 30%</p>
+                </div>
+                <div class="flex1">
+                    <img class="icons" src="./images/eyeicon.png" alt="icon">
+                    <p class="grey">24 peopleare viewing this right now</p>
+                </div>
+                <div class="hurryup flex">
+                    <div><p>Hurry up! Sale ends in:</p></div>
+                    <div><p>00 : 05 : 59 : 47</p></div>
+                </div>
+                <p class="grey">Only <b>9</b> items in stock!</p>
+                <img src="./images/redbar.png" alt="icon">
+                <P class="blod">Size: M</P>
+                <div class="flex1">
+                    <p class="border">M</p>
+                    <p class="border">L</p>
+                    <p class="border">XL</p>
+                    <p class="border">XXL</p>
+                </div>
+                <p> <b>Color:</b> blue</p>
+                <div class="colorchoose">
+                    <svg width="150" height="40" viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="circle" cx="20" cy="15" r="12" fill="lightblue" stroke="white" stroke-width="1"/>
+                        <circle class="circle" cx="55" cy="15" r="12" fill="black" stroke="white" stroke-width="1"/>
+                        <circle class="circle" cx="90" cy="15" r="12" fill="pink" stroke="white" stroke-width="1"/>
+                    </svg>
+                </div>
+                <p>Quannity</p>
+                <div class="flex1 marginbottom">
+                    <div class="flex">
+                        <p class="border">-</p>
+                        <p class="alineselfcenter">1</p>
+                        <p class="border">+</p>
+                    </div>
+                    <p class="border addcart"><b>Add to cart</b></p>
+                </div>
+                <div class="flex1 box marginbottom">
+                    <img class="icons" src="./images/exchangeicon.png" alt="icon">
+                    <P>Compare</P>
+                    <img class="icons" src="./images/questionicon.png" alt="icon">
+                    <P>Ask a question</P>
+                    <img class="icons" src="./images/shareicon.png" alt="icon">
+                    <P>Share</P>
+                </div>
+                <div class="flex1">
+                    <img class="icons" src="./images/shippingicon.png" alt="icon">
+                    <P><b>Estimated Delivery:</b>Jul 30 - Aug 03</P>
+                </div>
+                <div class="flex1 marginbottom">
+                    <img class="icons" src="./images/packageicon.png" alt="icon">
+                    <P><b>Free Shipping & Returns:</b> On all orders over $75</P>
+                </div>
+                <div class="greybox">
+                    <img src="./images/trustbag.png" alt="icon">
+                    <p><b>Guarantee safe & secure checkout</b></p>
+                </div>
+
+            </div> 
+        </div>       
         <!-- packages part -->
         <div id="packages" aria-label="Shipping Section">
             <div class="margin right">
@@ -99,23 +194,23 @@
 
     <footer class="margin footer" aria-label="Footer Section">
         <div class="brands">
-            <div><p>FASCO</p></div>
-        <nav aria-label="Footer Navigation">
-            <div><button class="hamburger" aria-label="Toggle Footer Menu">☰</button>
-                <ul class="menu">
-                    <li><a href="./index.html" aria-label="Navigation Menu">Home</a></li>
-                        <li><a href="#Shop">Shop</a></li>
-                        <li><a href="#packages">Products</a></li>
-                        <li><a href="#pages">Sign in</a></li>
-                </ul>
+            <div><p>FASCO</p>
+        </div>
+        <nav class="dropdown" aria-label="Footer Navigation">
+            <div><button class="dropbtn">☰</button>
+                <div class="dropdown-content" aria-label="Toggle Menu">
+                    <a href="./index.html" aria-label="Navigation Menu">Home</a>
+                    <a href="#Shop">Shop</a>
+                    <a href="#packages">Products</a>
+                    <a href="#pages">Sign in</a>
+                </div>
                 
             </div>  
         </nav>
         </div>
         <div class="copyright">
             <p aria-label="copyright Information">&copy; 2022 FASCO. All Rights Reserved.</p>
-        </div>
-        
+        </div>    
     </footer>
     
 </body>
