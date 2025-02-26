@@ -109,6 +109,7 @@ a{
 .term{
     font-size: 0.8rem;
     text-align: end;
+    margin-top: 3rem;
 }
 
 /* laptop image and text display side by side */
@@ -127,12 +128,11 @@ a{
         width: 50%; 
         text-align: left;
     }
-    
     .box2 {
         border: 2px solid rgb(231, 231, 231);
         color: black;
         margin: 0; 
-        padding: 5rem;
+        padding: 1rem 5rem;
 
     }
     
