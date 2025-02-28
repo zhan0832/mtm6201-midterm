@@ -8,31 +8,43 @@
     <title> Product Deals</title>
 </head>
 <body>
-    <header class="margin">
-        <Nav class="header">
-            <div><h1>FASCO</h1></div>
-            <nav class="dropdown" aria-label="Main Navigation">
-                <div><button class="dropbtn">☰</button>        
-                    <div class="dropdown-content" aria-label="Toggle Menu">
-                        <a href="./index.html" aria-label="Navigation Menu">Home</a>
-                        <a href="#Shop">Shop</a>
-                        <a href="#packages">Products</a>
-                        <a href="./sign-in.html">Sign in</a>
-                    </div>        
-                </div> 
-            </nav>
-            <div class="search-icon hidden">
-                <i class="fas fa-search"></i>  
-                <i class="fas fa-star"></i>     
-                <i class="fas fa-shopping-cart"></i>  
-                <i class="fas fa-user"></i> 
-            </div>
-        </Nav>
+    <header>
+        <!-- add skip link -->
+        <nav aria-label="Skip Links">
+            <ul class="skip-links" role="list">
+                <li role="listitem"><a href="#navigation" aria-label="Skip to main navigation">Skip to main navigation</a></li>
+                <li role="listitem"><a href="./sign-in.html" aria-label="Skip to Sign in">Skip to Sign in</a></li>
+                <li role="listitem"><a href="./sign-in.html" aria-label="Skip to Sign up">Skip to Sign up</a></li>
+            </ul>
+        </nav>
+        <!-- mian navigation part -->
+        <section class="margin">
+            <Nav class="header" id="navigation">
+                <div><h1>FASCO</h1></div>
+                <nav class="dropdown" aria-label="Main Navigation">
+                    <div><button class="dropbtn">☰</button>        
+                        <div class="dropdown-content" aria-label="Menu">
+                            <a href="./index.html" aria-label="Go to home page">Home</a>
+                            <a href="#shop" aria-label="Go to shop">Shop</a>
+                            <a href="#packages" aria-label="Go to package informatin">Products</a>
+                            <a href="./sign-in.html" aria-label="Go to sign-in">Sign in</a>
+                        </div>        
+                    </div> 
+                </nav>
+                <div class="search-icon hidden">
+                    <i class="fas fa-search"></i>  
+                    <i class="fas fa-star"></i>     
+                    <i class="fas fa-shopping-cart"></i>  
+                    <i class="fas fa-user"></i> 
+                </div>
+            </Nav>
+        </section>
     </header>
+    
     <main>
         <!-- product details -->
-        <div class="productsdl margin">
-            <div class="p-image">
+        <section id="shop" class="productsdl margin margintop" aria-label="product details">
+            <div class="p-image" aria-label="picture with details for products">
                 <div class="swiper-container">
                     <div class="swiper ">
                         <img src="./images/div.swiper-slide-5.png" alt="dress details">
@@ -51,7 +63,7 @@
             </div>
             <div class="p-inf">
                 <p class="grey">fasco</p>
-                <div class="flex">
+                <div class="flex" aria-label="New products">
                     <h2 class="blod">Denim Jacket</h2>
                     <i class="fa-regular fa-star alineselfcenter"></i>
 
@@ -65,9 +77,9 @@
                     <span>(3)</span>
                 </div>
                 <div class="flex1 blod">
-                    <h3>$39.00</h3>
-                    <p class="grey"><s>$59.00</s></p>
-                    <p class="save">SAVE 30%</p>
+                    <h3 aria-label="price now">$39.00</h3>
+                    <p class="grey" aria-label="original price"><s>$59.00</s></p>
+                    <span class="save">SAVE 30%</span>
                 </div>
                 <div class="flex1">
                     <img class="icons" src="./images/eyeicon.png" alt="icon">
@@ -80,28 +92,41 @@
                 <p class="grey">Only <b>9</b> items in stock!</p>
                 <img src="./images/redbar.png" alt="icon">
                 <P class="blod">Size: M</P>
-                <div class="flex1">
-                    <p class="border">M</p>
-                    <p class="border">L</p>
-                    <p class="border">XL</p>
-                    <p class="border">XXL</p>
+                <div class="flex1" aria-label="choose the size" role="list">
+                    <button class="border" role="listitem">M</button>
+                    <button class="border" role="listitem">L</button>
+                    <button class="border" role="listitem">XL</button>
+                    <button class="border" role="listitem">XXL</button>
                 </div>
                 <p> <b>Color:</b> blue</p>
-                <div class="colorchoose">
-                    <svg width="150" height="40" viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="circle" cx="20" cy="15" r="12" fill="lightblue" stroke="white" stroke-width="1"/>
-                        <circle class="circle" cx="55" cy="15" r="12" fill="black" stroke="white" stroke-width="1"/>
-                        <circle class="circle" cx="90" cy="15" r="12" fill="pink" stroke="white" stroke-width="1"/>
-                    </svg>
+                <div class="colorchoose" aria-label="Choose a color" role="list">
+                    <button class="button3" role="listitem" aria-label="Color: Light Blue">
+                        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="14" fill="lightblue"/>
+                        </svg>
+                    </button>
+                
+                    <button class="button3" role="listitem" aria-label="Color: Black">
+                        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="14" fill="black" stroke="white" stroke-width="1"/>
+                        </svg>
+                    </button>
+                
+                    <button class="button3" role="listitem" aria-label="Color: Pink">
+                        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="14" fill="pink"/>
+                        </svg>
+                    </button>
                 </div>
                 <p>Quannity</p>
+                <!-- add aria-label for shopping -->
                 <div class="flex1 marginbottom">
-                    <div class="flex">
-                        <p class="border">-</p>
-                        <p class="alineselfcenter">1</p>
-                        <p class="border">+</p>
+                    <div class="flex" aria-label="choose the Quannity">
+                        <button aria-label="add one item" class="border">-</button>
+                        <p aria-label="number of the item" class="alineselfcenter">1</p>
+                        <button aria-label="remove one item" class="border">+</button>
                     </div>
-                    <p class="border addcart"><b>Add to cart</b></p>
+                    <button class="border addcart" role="button"><b>Add to cart</b></button>
                 </div>
                 <div class="flex1 box marginbottom">
                     <img class="icons" src="./images/exchangeicon.png" alt="icon">
@@ -113,11 +138,11 @@
                 </div>
                 <div class="flex1">
                     <img class="icons" src="./images/shippingicon.png" alt="icon">
-                    <P><b>Estimated Delivery:</b>Jul 30 - Aug 03</P>
+                    <P aria-label="dilivery infomation"><b>Estimated Delivery:</b>Jul 30 - Aug 03</P>
                 </div>
                 <div class="flex1 marginbottom">
                     <img class="icons" src="./images/packageicon.png" alt="icon">
-                    <P><b>Free Shipping & Returns:</b> On all orders over $75</P>
+                    <P aria-label="shipping policy"><b>Free Shipping & Returns:</b> On all orders over $75</P>
                 </div>
                 <div class="greybox">
                     <img src="./images/trustbag.png" alt="icon">
@@ -125,46 +150,48 @@
                 </div>
 
             </div> 
-        </div>       
+        </section>       
         <!-- packages part -->
-        <div id="packages" aria-label="Shipping Section">
-            <div class="margin right">
-                <p class="grey" aria-label="Collection Category">Woman Collection</p>
-                <h2>Peaky Blinders</h2>
-                <p>DESCRIPTION</p>
-                <P class="grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</P>
-                <div>
-                    <p class="grey" aria-label="Product Size">size</p>
+        <section  aria-label="Shipping Section">
+            <div id="packages">
+                <div class="margin right">
+                    <p class="grey" aria-label="Collection Category">Woman Collection</p>
+                    <h2>Peaky Blinders</h2>
+                    <p>DESCRIPTION</p>
+                    <P class="grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</P>
+                    <div>
+                        <p class="grey" aria-label="Product Size">size</p>
 
-                </div>
-                <h3 aria-label="Price">$100.00</h3>
-                <button class="button" aria-label="Buy Now">Buy Now</button>
-            </div>
-        </div>
-        <div class="flex brands margin">
-            <div class="brands"><img class="icon" src="./images/icon.png" alt="icon">
-                <div><p>High Quality</p>
-                    <p class="grey">crafted from top materials</p>
+                    </div>
+                    <h3 aria-label="Price">$100.00</h3>
+                    <button class="button" aria-label="Buy Now">Buy Now</button>
                 </div>
             </div>
-            <div class="brands"><img class="icon" src="./images/icon.png" alt="icon">
-                <div><p>High Quality</p>
-                    <p class="grey">crafted from top materials</p>
+            <div class="highquality margin">
+                <div class="flex3"><img class="icon" src="./images/icon.png" alt="icon">
+                    <div><p>High Quality</p>
+                         <p class="grey">crafted from top materials</p>
+                    </div>
+                </div>
+                <div class="flex3"><img class="icon" src="./images/icon.png" alt="icon">
+                    <div><p>High Quality</p>
+                         <p class="grey">crafted from top materials</p>
+                    </div>
+                </div>
+                <div class="flex3"><img class="icon" src="./images/icon.png" alt="icon">
+                    <div><p>High Quality</p>
+                         <p class="grey">crafted from top materials</p>
+                    </div>
+                </div>
+                <div class="flex3"><img class="icon" src="./images/icon.png" alt="icon">
+                    <div><p>High Quality</p>
+                        <p class="grey">crafted from top materials</p>
+                    </div>
                 </div>
             </div>
-            <div class="brands"><img class="icon" src="./images/icon.png" alt="icon">
-                <div><p>High Quality</p>
-                    <p class="grey">crafted from top materials</p>
-                </div>
-            </div>
-            <div class="brands"><img class="icon" src="./images/icon.png" alt="icon">
-                <div><p>High Quality</p>
-                    <p class="grey">crafted from top materials</p>
-                </div>
-            </div>
-        </div>
+        </section>
         <!-- People Also Loved -->
-        <div id="deals" class="box" aria-label="Deals of the Month section">
+        <section id="deals" class="box margintop" aria-label="Deals of the Month section">
             <div class="dotm margin">
                 <h2>People Also Loved</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -179,16 +206,16 @@
                     <img class="slide" src="./images/deals.png" alt="dress">
                 </div>
             </div>
-        </div>
-        <!-- subscribe part -->
-        <div class="subscribe box" aria-label="Subscribe to Newsletter">
-            <div ><img src="./images/subscribe.png" alt="banner"></div>
+        </section>
+        <!-- Subscribe part -->
+        <section class="subscribe box margintop" aria-label="Subscribe to Newsletter">
+            <div class="hidden"><img src="./images/subscribe.png" alt="banner"></div>
             <div class="h2center subscribetext"><h2>Subscribe To Our Newsletter</h2>
                 <p class="grey box"  aria-label="Subscription Description">Sed ut perspiciatis unde omnis iste natus error sit </p>
                 <button class="button  box" aria-label="Subscribe Now">Subscribe Now</button>
             </div>
             
-        </div>
+        </section>
 
     </main>
 
@@ -200,9 +227,9 @@
             <div><button class="dropbtn">☰</button>
                 <div class="dropdown-content" aria-label="Toggle Menu">
                     <a href="./index.html" aria-label="Navigation Menu">Home</a>
-                    <a href="#Shop">Shop</a>
+                    <a href="#shop">Shop</a>
                     <a href="#packages">Products</a>
-                    <a href="#pages">Sign in</a>
+                    <a href="./sign-in.html">Sign in</a>
                 </div>
                 
             </div>  

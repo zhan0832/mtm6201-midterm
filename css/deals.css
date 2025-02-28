@@ -2,8 +2,8 @@
 :root{
     --primary-color: #222;
     --secondary-color:rgb(254,254,254);
-    --red-color: red;
-    --grey-color: rgb(122, 122, 122);
+    --red-color: rgb(169, 0, 0);
+    --grey-color: rgb(76, 76, 76);
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 /* Basic Reset */
@@ -36,6 +36,7 @@ h2{
 }
 p{
     margin: 0.5rem;
+    margin-left: 0;
 }
 .hidden{
     display: none;
@@ -52,6 +53,13 @@ p{
     align-self: center;
     justify-content: space-between;
 }
+.margintop{
+    padding-top: 3rem;
+}
+.border:focus{
+    text-decoration: none;
+    color: var(--primary-color);
+}
 /* icon */
 .icon{
     width: 2rem;
@@ -63,7 +71,7 @@ p{
     
 }
 /* buttons */
-button, .button {
+ .button {
     background: var(--primary-color);
     color: var(--secondary-color);
     padding: 1rem 3rem;
@@ -75,7 +83,7 @@ button, .button {
     transition: background var(--transition-speed), transform var(--transition-speed);
 }
 
-button:hover, .button:hover {
+.button:hover {
     background: #444;
     transform: scale(1.1);
 }
@@ -95,6 +103,19 @@ button:hover, .button:hover {
     color: var(--secondary-color);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
+/* add hovernand focus to select the color */
+.button3{
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 70px;
+}
+.button3:hover{
+    border: 1px solid var(--primary-color);
+}
+.button3:focus{
+    border: 1px solid var(--primary-color);
+}
+
 /* images */
 img{
     width: 100%;
@@ -104,6 +125,19 @@ img{
 .box{
     box-shadow: 0px 4px 20px rgba(159, 158, 158, 0.2);
 }
+/* Add skip links */
+.skip-links{
+    list-style: none;
+    color: rgb(12, 12, 12);
+  }
+  .skip-links a{
+    position: absolute;
+    top: -5rem;
+  }
+  .skip-links a:focus{
+    position: static;
+    top: 0;
+  }
 /* navigation part */
 .header{
     display: flex;
@@ -170,14 +204,14 @@ img{
 .save{
     color: var(--secondary-color);
     background-color: var(--red-color);
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     padding: 0.2rem 0.4rem;
     border-radius: 20px;
 }
 .hurryup{
-    color: rgb(255, 119, 107);
-    background-color: rgb(255, 220, 215);
-    border: 1px solid rgb(255, 119, 107);
+    color: rgb(112, 9, 0);
+    background-color: var(--secondary-color);
+    border: 1px solid rgb(112, 9, 0);
     border-radius: 3px;
     margin: 1rem 0;
     padding: 0.4rem;
@@ -192,9 +226,7 @@ img{
     color: var(--secondary-color);
     background-color: var(--primary-color);
 }
-.circle:hover{
-    stroke: #333;   
-}
+
 .addcart{
     flex-grow: 1;
     text-align: center;
@@ -267,22 +299,19 @@ img{
     margin-right: 3rem;
     margin-left: auto;
 }
+.flex3{
+    display: flex;
+    justify-content: center;
+}
+/* use grid property for display */
+.highquality{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
 
 /* subscribe part */
-.subscribe{
-    padding: 4rem;
-    position: relative;  
-    border-bottom: 2px solid lightgray;
-}
-.subscribetext{
-    width: 40%;
-    position: absolute;
-    top: 0;
-    left: 25%;
-}
-.subscribe .grey{
-    padding-bottom: 3rem;
-}
+
 .margin{
     margin: 0 3rem;
 }
@@ -361,8 +390,27 @@ display: flex;
     }
 
      /* subscribe part */
+     .subscribe{
+        padding: 4rem;
+        position: relative;  
+        border-bottom: 2px solid lightgray;
+    }
+    .subscribetext{
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 25%;
+    }
+    .subscribe .grey{
+        padding-bottom: 3rem;
+    }
      .subscribetext{
         top: 20%;
+    }
+    /* package part */
+    /* dislpay 4 column with grid */
+    .highquality{
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
     }
 }
 

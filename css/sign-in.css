@@ -71,6 +71,9 @@ h2{
     margin: 0;
     align-self: center;
 }
+.borderbox:hover{
+    box-shadow: var(--box-shadow);
+}
 .box2> *{
     flex-grow: 1;
 }
@@ -85,6 +88,9 @@ h2{
     color: var(--grey-color);
     text-align: center;
     margin: 2rem;
+}
+label{
+    display: none;
 }
 input{
     width: 100%;
@@ -102,7 +108,7 @@ input{
     box-shadow: var(--box-shadow);
     border: none;
 }
-a{
+#forgot-password{
     font-size: 0.8rem;
     text-align: end;
 }

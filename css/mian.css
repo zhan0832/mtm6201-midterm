@@ -2,8 +2,8 @@
 :root{
     --primary-color: #222;
     --secondary-color:rgb(254,254,254);
-    --red-color: red;
-    --grey-color: rgb(122, 122, 122);
+    --red-color: rgb(159, 0, 0);
+    --grey-color: rgb(75, 75, 75);
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 /* Basic Reset */
@@ -25,10 +25,16 @@ body {
     display: table;
     clear: both; 
     }
+.flex{
+    display: flex;
+    justify-content: center;
+}
+/* hidden class for all the hide items for mobile style */
 .hidden{
     display: none;
 }
-/* buttons */
+
+/* Set a unified button style */
 button, .button {
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -61,6 +67,9 @@ button:hover, .button:hover {
     color: var(--secondary-color);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
+button:focus{
+    box-shadow: var(--box-shadow);
+}
 /* images */
 img{
     width: 100%;
@@ -72,9 +81,22 @@ h2{
 .box{
     box-shadow: 0px 4px 20px rgba(159, 158, 158, 0.2);
 }
+/* Add skip links */
+.skip-links{
+    list-style: none;
+    color: rgb(12, 12, 12);
+  }
+  .skip-links a{
+    position: absolute;
+    top: -5rem;
+  }
+  .skip-links a:focus{
+    position: static;
+    top: 0;
+  }
 
 /* Navigation Styles */
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,7 +105,7 @@ header {
     padding: 2rem 0;
     position: relative;
 }
-/* Navigation (Mobile-First) */
+/* Navigation (Mobile-First) and dropdown menu */
 
 .dropbtn{
     background-color: var(--secondary-color);
@@ -111,13 +133,13 @@ header {
 }
 .dropdown-content a:hover {background-color: var(--primary-color); color: var(--secondary-color);}
 .dropdown:hover .dropdown-content {display: block;}
-    .dropdown:hover .dropbtn{background-color: var(--primary-color); color: var(--secondary-color) }
+    .dropdown:hover .dropbtn{background-color: var(--primary-color); color: var(--secondary-color) } /* Set the hover to trigger the menu display */      
+    
 /* banner part */
 .brands{
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-
     padding: 3rem 0;
 }
 
@@ -149,7 +171,7 @@ header {
     width: 100%;
     overflow: hidden;
 }
-/* slide container animation */
+/* add animation for slide image container */
 .dotm-img {
     display: flex;
     width: 100%; 
@@ -187,7 +209,7 @@ header {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-}
+}/* display as 2 column */
 .newarrivalsbox:hover{
     box-shadow: var(--box-shadow)
 }
@@ -219,7 +241,6 @@ header {
     margin: 3rem 0;
 }
 .right{
-   
     width: 32%;
     margin-right: 3rem;
     margin-left: auto;
@@ -228,6 +249,12 @@ header {
     height: 3rem;
     width: 3rem;
     align-self: center;
+}
+/* use grid property for display */
+.highquality{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
 }
 /* follow us */
 #follow-us{
@@ -238,9 +265,8 @@ header {
 #follow-us img:hover{
     transform: scale(1.2);
     box-shadow: var(--box-shadow);
-    
+}/* add hover for image grow */
 
-}
 /* customers part */
 .customers{
     padding: 3rem 0;
@@ -259,20 +285,7 @@ header {
     margin-right: 25px;
 }
 /* subscribe part */
-.subscribe{
-    padding: 4rem;
-    position: relative;  
-    border-bottom: 2px solid lightgray;
-}
-.subscribetext{
-    width: 40%;
-    position: absolute;
-    top: 0;
-    left: 25%;
-}
-.subscribe .grey{
-    padding-bottom: 3rem;
-}
+
 .margin{
     margin: 0 3rem;
 }
@@ -292,23 +305,24 @@ header {
         margin: 0 8rem;
     }
     /* navigation */
-.dropbtn{
-    display: none;
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-}
-.dropdown-content{
-    display: flex;
-    position: inherit;
-    box-shadow: none;
-}
-.dropdown:hover {
-    display: flex;
-    justify-content: space-between;
-}
-.dropdown:hover .dropdown-content {display: flex;}
+    .dropbtn{
+        display: none;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    /* laptop style header display in same row */
+    .dropdown-content{
+        display: flex;
+        position: inherit;
+        box-shadow: none;
+    }
+    .dropdown:hover {
+        display: flex;
+        justify-content: space-between;
+    }
+    .dropdown:hover .dropdown-content {display: flex;}
     /* banner */
     .hidden{
         display: flex;    
@@ -321,7 +335,11 @@ header {
         max-height: 800px;
         gap: 2rem;
     }
-
+    /* package part */
+    /* dislpay 4 column with grid */
+    .highquality{
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
     
     /* deal part */
     #deals{
@@ -339,6 +357,20 @@ header {
         display: flex;
     }
     /* subscribe part */
+    .subscribe{
+        padding: 4rem;
+        position: relative;  
+        border-bottom: 2px solid lightgray;
+    }
+    .subscribetext{
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 25%;
+    }
+    .subscribe .grey{
+        padding-bottom: 3rem;
+    }
     .subscribetext{
         top: 20%;
     }

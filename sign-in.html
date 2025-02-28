@@ -3,39 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/sign-in.css">
-    
+    <link rel="stylesheet" href="../css/sign-in.css">  
     <title>Sign In</title>
+    
 </head>
 <body>
     <header></header>
     <main class="container">
-        <div class="box1">
-            <img src="./images/image.png" alt="Product Image">
-        </div>
-        <div class="box2">
+        <section class="box1">
+            <img src="./images/image.png" alt="Background Image">
+        </section>
+        <section class="box2" role="form">
             <h1>FASCO</h1>
             <h2>Sign In To FASCO</h2>
             <div class="flex">
-                <div class="borderbox flex button">
+                <button role="button" aria-label="Sign in with Google" class="borderbox flex button">
                     <img class="icon" src="./images/Google-icon.png" alt="icon">
                     <p>Sign up with Google</p>
-                </div>
-                <div class="borderbox flex button">
+                </button>
+                <button role="button" aria-label="Sign in with Google" class="borderbox flex button">
                     <img class="icon" src="./images/email.png" alt="icon">
                     <p>Sign up with Email</p>
-                </div>
+                </button>
             </div>
+            <!-- sign in form -->
             <p class="or"><b>- OR -</b></p>
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Password">
-            <div class="buttoncontainer">
-                <button class="button2">Sign in</button>
-                <button class="button2">Register Now</button>
-                <a href="">Forget password</a>
-            </div>
+            <form action="login.php" method="POST">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <div class="buttoncontainer">
+                    <button type="submit" class="button2">Sign In</button>
+                    <button type="button" class="button2" onclick="location.href='register.html'">Register Now</button>
+                </div>   
+            </form>
+            <a aria-label="go to forgot-password" href="forgot-password.html" id="forgot-password">Forgot password</a>
             <p class="term">FASCO Terms & Conditions</p>
-        </div>
+        </section>
     </main>
     <footer></footer>
     
