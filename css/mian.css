@@ -151,7 +151,18 @@ h2{
 }
 .box-middle> *{
     flex-grow: 1;
-
+}
+.box-middle> h2{
+    margin: 0;
+}
+.box-middle> p{
+    margin: 0;
+}
+#banner-heading{
+    font-size: 7rem;
+    
+    color: transparent;
+    -webkit-text-stroke: 1px black;
 }
 .banner-center h2{
     font-size: 2rem;
@@ -233,18 +244,15 @@ h2{
 /* package part */
 #packages{
     display: flex;
-    flex-direction: row-reverse;
     padding: 3rem 0;
-    background-image: url('../images/peaky.png');
-    background-size: cover;
-    background-position: center;
+    background-color: rgb(244, 245, 242);
     margin: 3rem 0;
 }
-.right{
-    width: 32%;
-    margin-right: 3rem;
-    margin-left: auto;
+.right{  
+    width: 60%;
+    
 }
+
 .icon{
     height: 3rem;
     width: 3rem;
@@ -336,6 +344,20 @@ h2{
         gap: 2rem;
     }
     /* package part */
+    #packages{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 3rem 0;
+        background-image: url('../images/peaky.png');
+        background-size: cover;
+        background-position: center;
+        margin: 3rem 0;
+    }
+    .right{
+        width: 32%;
+        margin-right: 3rem;
+        margin-left: auto;
+    }
     /* dislpay 4 column with grid */
     .highquality{
         grid-template-columns: 1fr 1fr 1fr 1fr ;
