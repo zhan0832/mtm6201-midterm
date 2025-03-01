@@ -3,7 +3,8 @@
     --primary-color: #222;
     --secondary-color:rgb(254,254,254);
     --red-color: rgb(159, 0, 0);
-    --grey-color: rgb(75, 75, 75);
+    --grey-color: rgb(149, 147, 147);
+    --blue-color: rgb(105, 148, 250);
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     --section-padding: 3rem 0;  
     --container-margin: 0 3rem; 
@@ -18,6 +19,7 @@ html{
 body {
     margin: 0 auto;
     padding: 0;
+    max-width: 1080px;
 }
 *,
 *:after,
@@ -43,6 +45,10 @@ body {
 .flex3{
     display: flex;
     justify-content: center;
+}
+.flex4{
+    display: flex;
+    justify-content: space-between;
 }
 .hidden{
     display: none;
@@ -71,7 +77,7 @@ body {
 
 /* Typography */
 h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 0;
 }
 h2{
@@ -424,6 +430,93 @@ img{
 .copyright{
     align-self: center;
 }
+/* Sign-in page style */
+.box2 h1{
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem 0;
+}
+.box2 h2{
+    font-size: 2rem;
+    margin: 0;
+}
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 3rem;
+}
+.flex4 .icon{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.box1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box2 {
+    position: absolute;
+    background: rgba(244, 243, 243, 0.8); 
+    margin: 1rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.borderbox> p{
+    font-size: 0.8rem;
+    margin: 0;
+    align-self: center;
+}
+.borderbox:hover{
+    box-shadow: var(--box-shadow);
+}
+.box2> *{
+    flex-grow: 1;
+}
+.button-sign, .button-sign2{
+    background-color: transparent;
+    border: 1px solid var(--blue-color);
+    border-radius: 5px;
+    padding: 0.3rem 1.5rem;
+    margin-top: 1rem;
+}
+.or{
+    color: var(--grey-color);
+    text-align: center;
+    margin: 2rem;
+}
+label{
+    display: none;
+}
+input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--grey-color);
+}
+.buttoncontainer{
+    display: flex;
+    flex-direction: column;
+}
+.button-sign2:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    border: none;
+}
+#forgot-password{
+    font-size: 0.8rem;
+    text-align: end;
+}
+.term{
+    font-size: 0.8rem;
+    text-align: end;
+    margin-top: 3rem;
+}
 
 /* Desktop Styles */
 @media (min-width: 768px) {
@@ -530,5 +623,24 @@ img{
     }
     .subscribe .grey{
         padding-bottom: 3rem;
+    }
+    /* Sign-in page style */
+    .signin-container {
+        display: flex;
+        margin: 5rem;
+        align-items: stretch;
+        
+    }
+    .box1, .box2 {
+        position: static; 
+        width: 50%; 
+        text-align: left;
+    }
+    .box2 {
+        border: 2px solid rgb(231, 231, 231);
+        color: black;
+        margin: 0; 
+        padding: 1rem 5rem;
+
     }
 }

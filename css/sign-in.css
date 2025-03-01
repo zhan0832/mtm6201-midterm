@@ -36,14 +36,14 @@ h2{
     height: 1.5rem;
     align-self: center;
 }
-.flex{
+.flex4{
     display: flex;
     justify-content: space-between;
 }
 
 /* sign in page  */
 /* mobile first text overlay on image */
-.container {
+.signin-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +123,7 @@ input{
     html{
         font-size: 18px;
     }
-    .container {
+    .signin-container {
         display: flex;
         margin: 5rem;
         align-items: stretch;
