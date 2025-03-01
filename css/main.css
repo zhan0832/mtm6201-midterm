@@ -5,7 +5,10 @@
     --red-color: rgb(159, 0, 0);
     --grey-color: rgb(75, 75, 75);
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --section-padding: 3rem 0;  
+    --container-margin: 0 3rem; 
 }
+
 /* Basic Reset */
 html{
     font-family: "Open Sans", sans-serif;
@@ -14,7 +17,8 @@ html{
 }
 body {
     margin: 0 auto;
-    padding: 0;}
+    padding: 0;
+}
 *,
 *:after,
 *:before{
@@ -24,18 +28,63 @@ body {
     content: "";
     display: table;
     clear: both; 
-    }
+}
+
+/* Utility Classes */
 .flex{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+.flex1{
+    display: flex;
+    align-items: center;
+}
+.flex3{
     display: flex;
     justify-content: center;
 }
-/* hidden class for all the hide items for mobile style */
 .hidden{
     display: none;
 }
+.grey{
+    color: var(--grey-color);
+    font-size: 0.8rem;
+}
+.red{
+    color: var(--red-color);
+    font-size: 0.8rem;
+}
+.margintop{
+    padding-top: 3rem;
+}
+.margin{
+    margin: var(--container-margin);
+}
+.h2center{
+    text-align-last: center;
+    margin: 3rem;
+}
+.alineselfcenter{
+    align-self: center;
+}
 
-/* Set a unified button style */
-button, .button {
+/* Typography */
+h1{
+    font-size: 2rem;
+    padding: 0;
+}
+h2{
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+}
+p{
+    margin: 0.5rem;
+    margin-left: 0;
+}
+
+/* Button Styles */
+.button {
     background: var(--primary-color);
     color: var(--secondary-color);
     padding: 1rem 3rem;
@@ -47,7 +96,7 @@ button, .button {
     transition: background var(--transition-speed), transform var(--transition-speed);
 }
 
-button:hover, .button:hover {
+.button:hover {
     background: #444;
     transform: scale(1.1);
 }
@@ -67,21 +116,38 @@ button:hover, .button:hover {
     color: var(--secondary-color);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
+
+.button3{
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 70px;
+}
+.button3:hover, .button3:focus{
+    border: 1px solid var(--primary-color);
+}
+
 button:focus{
     box-shadow: var(--box-shadow);
 }
-/* images */
+
+/* Images and Icons */
 img{
     width: 100%;
     height: auto;
 }
-h2{
-    font-size: 2.5rem;
+.icon{
+    height: 3rem;
+    width: 3rem;
+    align-self: center;
+}
+.icons{
+    width: 1rem;
 }
 .box{
     box-shadow: 0px 4px 20px rgba(159, 158, 158, 0.2);
 }
-/* Add skip links */
+
+/* Skip Links */
 .skip-links{
     list-style: none;
     color: rgb(12, 12, 12);
@@ -105,12 +171,13 @@ h2{
     padding: 2rem 0;
     position: relative;
 }
-/* Navigation (Mobile-First) and dropdown menu */
 
+/* Navigation (Mobile-First) and dropdown menu */
 .dropbtn{
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    padding: 1rem;  
+    padding: 1rem; 
+    border-radius: 5px; 
 }
 .dropdown{
     position: relative;
@@ -133,20 +200,19 @@ h2{
 }
 .dropdown-content a:hover {background-color: var(--primary-color); color: var(--secondary-color);}
 .dropdown:hover .dropdown-content {display: block;}
-    .dropdown:hover .dropbtn{background-color: var(--primary-color); color: var(--secondary-color) } /* Set the hover to trigger the menu display */      
-    
-/* banner part */
+.dropdown:hover .dropbtn{background-color: var(--primary-color); color: var(--secondary-color) }
+
+/* Banner Section */
 .brands{
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    padding: 3rem 0;
+    padding: var(--section-padding);
 }
-
 .box-middle{
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items */
+    align-items: center;
     justify-content: space-between;
 }
 .box-middle> *{
@@ -160,17 +226,69 @@ h2{
 }
 #banner-heading{
     font-size: 7rem;
-    
     color: transparent;
     -webkit-text-stroke: 1px black;
 }
 .banner-center h2{
     font-size: 2rem;
 }
-/* deals of the month */
+
+/* Products Section */
+.p-image{
+    display: flex;
+    justify-content: center;
+}
+.save{
+    color: var(--secondary-color);
+    background-color: var(--red-color);
+    font-size: 0.9rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 20px;
+}
+.hurryup{
+    color: rgb(112, 9, 0);
+    background-color: var(--secondary-color);
+    border: 1px solid rgb(112, 9, 0);
+    border-radius: 3px;
+    margin: 1rem 0;
+    padding: 0.4rem;
+}
+.border{
+    background-color: var(--secondary-color);
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+.border:hover{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+.border:focus{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.addcart{
+    flex-grow: 1;
+    text-align: center;
+}
+.marginbottom{
+    margin-bottom: 2.5rem;
+}
+.greybox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(244, 245, 242);
+    padding: 2rem;
+}   
+.greybox> *{
+    width: 60%;
+    
+}
+/* Deals Section */
 #deals{
     background-color: rgb(244, 245, 242);
-
 }
 .timer{
     max-width: 200px;
@@ -178,11 +296,12 @@ h2{
 .dotm{
     padding: 2rem 0;
 }
+
+/* Slider Styles */
 .slider-container {
     width: 100%;
     overflow: hidden;
 }
-/* add animation for slide image container */
 .dotm-img {
     display: flex;
     width: 100%; 
@@ -196,14 +315,37 @@ h2{
     width: 60%;
     max-height: 350px;  
 }
-
 @keyframes slide {
     0% { transform: translateX(0%); }
     33% { transform: translateX(-30%); }
     66% { transform: translateX(-60%); }
     100% { transform: translateX(0%); }
 }
-/* new arrivals part */
+
+/* Swiper Styles*/
+.swiper-container {
+    width: 70px;  
+    max-height: 380px; 
+    overflow-y: auto; 
+    scroll-snap-type: y mandatory;
+    margin-bottom: 2rem;
+}
+.swiper {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+.swiper img {
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+.swiper img:hover{
+    box-shadow: var(--box-shadow);
+}
+
+/* New Arrivals Section */
 #newarrivals{
     display: flex;
     flex-direction: column;
@@ -220,70 +362,50 @@ h2{
     padding: 1rem;
     display: flex;
     flex-direction: column;
-}/* display as 2 column */
+}
 .newarrivalsbox:hover{
     box-shadow: var(--box-shadow)
-}
-.h2center{
-    text-align-last: center;
-    margin: 3rem;
-}
-.grey{
-    color: var(--grey-color);
-    font-size: 0.8rem;
-    margin-top: 0;
-}
-.red{
-    color: var(--red-color);
-    font-size: 0.8rem;
 }
 .newdress{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-/* package part */
+
+/* Package Section */
 #packages{
     display: flex;
-    padding: 3rem 0;
+    padding: var(--section-padding);
     background-color: rgb(244, 245, 242);
     margin: 3rem 0;
 }
 .right{  
     width: 60%;
-    
 }
-
-.icon{
-    height: 3rem;
-    width: 3rem;
-    align-self: center;
-}
-/* use grid property for display */
 .highquality{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
 }
-/* follow us */
+
+/* Follow Us Section */
 #follow-us{
-    padding: 3rem 0;
+    padding: var(--section-padding);
     display: flex;
     align-items: center;   
 }
 #follow-us img:hover{
     transform: scale(1.2);
     box-shadow: var(--box-shadow);
-}/* add hover for image grow */
-
-/* customers part */
-.customers{
-    padding: 3rem 0;
 }
 
+/* Customers Section */
+.customers{
+    padding: var(--section-padding);
+}
 .a1> .brands{
     padding: 3rem;
-    margin: 0 3rem;
+    margin: var(--container-margin);
     box-shadow: var(--box-shadow);
 }
 .a1> .brands:hover {
@@ -293,11 +415,8 @@ h2{
     width: 200px;
     margin-right: 25px;
 }
-/* subscribe part */
 
-.margin{
-    margin: 0 3rem;
-}
+/* Footer Section */
 .footer{
     display: flex;
     flex-direction: column;
@@ -305,6 +424,7 @@ h2{
 .copyright{
     align-self: center;
 }
+
 /* Desktop Styles */
 @media (min-width: 768px) {
     html{
@@ -313,7 +433,14 @@ h2{
     .margin{
         margin: 0 8rem;
     }
-    /* navigation */
+    main{
+        display: block;
+    }
+    .hidden{
+        display: flex;    
+    }
+
+    /* Navigation */
     .dropbtn{
         display: none;
     }
@@ -321,7 +448,6 @@ h2{
         display: flex;
         justify-content: space-between;
     }
-    /* laptop style header display in same row */
     .dropdown-content{
         display: flex;
         position: inherit;
@@ -331,12 +457,11 @@ h2{
         display: flex;
         justify-content: space-between;
     }
-    .dropdown:hover .dropdown-content {display: flex;}
-    /* banner */
-    .hidden{
-        display: flex;    
+    .dropdown:hover .dropdown-content {
+        display: flex;
     }
 
+    /* Banner */
     .large {
         display: flex;
         justify-content: center;
@@ -344,7 +469,17 @@ h2{
         max-height: 800px;
         gap: 2rem;
     }
-    /* package part */
+
+    /* Products */
+    .productsdl{
+        display: flex;
+    }
+    .productsdl> *{
+        margin: 2rem;
+        flex-grow: 1;
+    }
+
+    /* Package Section */
     #packages{
         display: flex;
         flex-direction: row-reverse;
@@ -359,27 +494,29 @@ h2{
         margin-right: 3rem;
         margin-left: auto;
     }
-    /* dislpay 4 column with grid */
     .highquality{
-        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    
-    /* deal part */
+
+    /* Deals Section */
     #deals{
         display: flex;
     }
     .dotm{
         width: 40%;
     }
-    /* new arrivals part */
+
+    /* New Arrivals */
     .newarrivalsbox{
         flex: 1 1 calc(33.3% - 20px); 
     }
-    /* customer say part */
+
+    /* Customer Section */
     .a1{
         display: flex;
     }
-    /* subscribe part */
+
+    /* Subscribe Section */
     .subscribe{
         padding: 4rem;
         position: relative;  
@@ -388,15 +525,10 @@ h2{
     .subscribetext{
         width: 40%;
         position: absolute;
-        top: 0;
+        top: 20%;
         left: 25%;
     }
     .subscribe .grey{
         padding-bottom: 3rem;
     }
-    .subscribetext{
-        top: 20%;
-    }
-
-
 }
