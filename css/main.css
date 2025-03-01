@@ -8,6 +8,7 @@
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     --section-padding: 3rem 0;  
     --container-margin: 0 3rem; 
+    --transition-speed: 0.3s;
 }
 
 /* Basic Reset */
@@ -81,7 +82,7 @@ h1{
     padding: 0;
 }
 h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 1.5rem 0;
 }
 p{
@@ -388,10 +389,12 @@ img{
 .right{  
     width: 60%;
 }
+/* use grid style */
 .highquality{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    margin-bottom: 3rem;
 }
 
 /* Follow Us Section */
@@ -483,6 +486,7 @@ img{
     border-radius: 5px;
     padding: 0.3rem 1.5rem;
     margin-top: 1rem;
+    transition: all var(--transition-speed) ease;
 }
 .or{
     color: var(--grey-color);
@@ -616,7 +620,7 @@ input{
         border-bottom: 2px solid lightgray;
     }
     .subscribetext{
-        width: 40%;
+        width: 50%;
         position: absolute;
         top: 20%;
         left: 25%;
