@@ -85,15 +85,15 @@ h2{
 .skip-links{
     list-style: none;
     color: rgb(12, 12, 12);
-  }
-  .skip-links a{
+}
+.skip-links a{
     position: absolute;
     top: -5rem;
-  }
-  .skip-links a:focus{
+}
+.skip-links a:focus{
     position: static;
     top: 0;
-  }
+}
 
 /* Navigation Styles */
 .header {
@@ -231,6 +231,7 @@ h2{
 .grey{
     color: var(--grey-color);
     font-size: 0.8rem;
+    margin-top: 0;
 }
 .red{
     color: var(--red-color);
