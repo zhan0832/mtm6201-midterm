@@ -20,7 +20,7 @@ html{
 body {
     margin: 0 auto;
     padding: 0;
-    max-width: 1080px;
+    max-width: 1200px;
 }
 *,
 *:after,
@@ -239,7 +239,10 @@ img{
 .banner-center h2{
     font-size: 2rem;
 }
-
+.banner-image{
+    background-color: var(--grey-color);
+    border-radius: 5px;
+}
 /* Products Section */
 .p-image{
     display: flex;
@@ -412,16 +415,21 @@ img{
 .customers{
     padding: var(--section-padding);
 }
+.a1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .a1> .brands{
     padding: 3rem;
-    margin: var(--container-margin);
+    width: 300px;
+    margin: 1rem;
     box-shadow: var(--box-shadow);
 }
 .a1> .brands:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .person-photo{
-    width: 200px;
     margin-right: 25px;
 }
 
@@ -525,7 +533,7 @@ input{
 /* Desktop Styles */
 @media (min-width: 768px) {
     html{
-        font-size: 16px;
+        font-size: 14px;
     }
     .margin{
         margin: 0 8rem;
@@ -563,7 +571,7 @@ input{
         display: flex;
         justify-content: center;
         align-items: stretch;
-        max-height: 800px;
+        flex: 1 1 calc(33.3% - 10rem);
         gap: 2rem;
     }
 
@@ -610,9 +618,15 @@ input{
 
     /* Customer Section */
     .a1{
-        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: center;
     }
-
+    .a1> .brands{
+        width: 360px;
+        
+    }
+    
     /* Subscribe Section */
     .subscribe{
         padding: 4rem;
@@ -647,4 +661,35 @@ input{
         padding: 1rem 5rem;
 
     }
+}
+
+/* Navigation Icons */
+.nav-arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-arrows span {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-arrows span:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.nav-arrows i {
+    font-size: 1rem;
 }
