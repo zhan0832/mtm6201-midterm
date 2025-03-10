@@ -53,7 +53,7 @@ body {
 }
 .hidden{
     display: none;
-}
+}/* class for hidden items when mobile first style */
 .grey{
     color: var(--grey-color);
     font-size: 0.8rem;
@@ -198,6 +198,7 @@ img{
     min-width: 16px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
+/* use z-indedx and hidde the menu content */
 .dropdown-content a{
     color: var(--primary-color);
     padding: 12px 16px;
@@ -205,6 +206,7 @@ img{
     display: block;
     z-index: 1;
 }
+/* menu display when hover on */
 .dropdown-content a:hover {background-color: var(--primary-color); color: var(--secondary-color);}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn{background-color: var(--primary-color); color: var(--secondary-color) }
@@ -307,7 +309,7 @@ img{
     padding: 2rem 0;
 }
 
-/* Slider Styles */
+/* Slider Styles add animation for slider container for images*/
 .slider-container {
     width: 100%;
     overflow: hidden;
@@ -332,7 +334,7 @@ img{
     100% { transform: translateX(0%); }
 }
 
-/* Swiper Styles*/
+/* Swiper Styles add scroll container for small images*/
 .swiper-container {
     width: 70px;  
     max-height: 380px; 
