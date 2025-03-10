@@ -42,12 +42,25 @@
         <section id="banner" class="large margin" aria-label="Banner Section">
             <div class="banner-image hidden"><img src="./images/banner-1.png" alt="Fashion sale banner"></div>
             <div class="box-middle">
+                <!-- Same image different size -->
+            <picture>
+                <source srcset="./images/banner-2-400.png"
+                media="(min-width: 760px)"/>
+                <source srcset="./images/banner-2-750.png"
+                media="(min-width: 320px)"/>
                 <img src="./images/banner-2.png" alt="Fashion sale banner">
+            </picture>
                 <h2>ULTIMATE</h2>
                 <h2 id="banner-heading">SALE</h2>
                 <P>NEW COLLECTION</P>
                 <button class="button" aria-label="Shop Now">Shop Now</button>
-                <img src="./images/banner-4.png" alt="Fashion sale banner">
+                <picture>
+                    <source srcset="./images/banner-4-400.png"
+                    media="(min-width: 760px)"/>
+                    <source srcset="./images/banner-4-750.png"
+                    media="(min-width: 320px)"/>
+                    <img src="./images/banner-4.png" alt="Fashion sale banner">
+                </picture>
             </div>  
             <div class="banner-image hidden"><img src="./images/banner-3.png" alt="Fashion sale banner"></div>  
         </section>
@@ -260,13 +273,56 @@
                 <p class="grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
             </div>
             <div class="brands" id="follow-us" >
-                <div><img src="./images/follow-us-1.png" alt="coats"></div>
-                <div><img src="./images/follow-us-2.png" alt="coats"></div>
-                <div><img src="./images/follow-us-1.png" alt="coats"></div>
-                <div class="hidden"><img src="./images/follow-us-2.png" alt="coats"></div>
-                <div class="hidden"><img src="./images/follow-us-1.png" alt="coats"></div>
-                <div class="hidden"><img src="./images/follow-us-2.png" alt="coats"></div>
-                <div class="hidden"><img src="./images/follow-us-1.png" alt="coats"></div>
+                <div><!-- Same image different size -->
+                    <picture>
+                        <source srcset="./images/follow-us-1-180.png"
+                        media="(min-width: 760px)"/>
+                        <source srcset="./images/follow-us-1-270.png"
+                        media="(min-width: 320px)"/>
+                        <img src="./images/follow-us-1.png" alt="coats">
+                    </picture></div>
+                <div><picture>
+                    <source srcset="./images/follow-us-2-160.png"
+                    media="(min-width: 760px)"/>
+                    <source srcset="./follow-us-2-250.png"
+                    media="(min-width: 320px)"/>
+                    <img src="./images/follow-us-2.png" alt="coats">
+                </picture></div>
+                <div><picture>
+                    <source srcset="./images/follow-us-1-180.png"
+                    media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-1-270.png"
+                    media="(min-width: 320px)"/>
+                    <img src="./images/follow-us-1.png" alt="coats">
+                </picture></div>
+                <div class="hidden"><picture>
+                    <source srcset="./images/follow-us-2-160.png"
+                    media="(min-width: 760px)"/>
+                    <source srcset="./follow-us-2-250.png"
+                    media="(min-width: 320px)"/>
+                    <img src="./images/follow-us-2.png" alt="coats">
+                </picture></div>
+                <div class="hidden"><picture>
+                    <source srcset="./images/follow-us-1-180.png"
+                    media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-1-270.png"
+                    media="(min-width: 320px)"/>
+                    <img src="./images/follow-us-1.png" alt="coats">
+                </picture></div>
+                <div class="hidden"><picture>
+                    <source srcset="./images/follow-us-2-160.png"
+                    media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-2-250.png"
+                    media="(min-width: 320px)"/>
+                    <img src="./images/follow-us-2.png" alt="coats">
+                </picture></div>
+                <div class="hidden"><picture>
+                    <source srcset="./images/follow-us-1-180.png"
+                    media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-1-270.png"
+                    media="(min-width: 320px)"/>
+                    <img src="./images/follow-us-1.png" alt="coats">
+                </picture></div>
             </div>
         </div>
         <!-- customers say part -->

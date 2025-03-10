@@ -11,7 +11,14 @@
     <header></header>
     <main class="signin-container">
         <section class="box1">
-            <img src="./images/image.png" alt="Background Image">
+            <!-- Same image different size -->
+            <picture>
+                <source srcset="./images/image-600.png"
+                media="(min-width: 760px)"/>
+                <source srcset="./images/image-750.png"
+                media="(min-width: 320px)"/>
+                <img src="./images/image.png" alt="placeholder">
+            </picture>
         </section>
         <section class="box2" role="form">
             <h1>FASCO</h1>
