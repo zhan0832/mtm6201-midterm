@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to your FASCO account">
     <link rel="stylesheet" href="../css/main.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Sign In</title>
     
 </head>
 <body>
-    <header></header>
+    <header>
+        <nav aria-label="Skip Links">
+            <ul class="skip-links" role="list">
+                <li role="listitem"><a href="#signin-form" aria-label="Skip to sign in form">Skip to sign in form</a></li>
+            </ul>
+        </nav>
+    </header>
     <main class="signin-container">
         <section class="box1">
             <!-- Same image different size -->
@@ -20,27 +28,40 @@
                 <img src="./images/image.png" alt="placeholder">
             </picture>
         </section>
-        <section class="box2" role="form">
-            <h1>FASCO</h1>
-            <h2>Sign In To FASCO</h2>
-            <div class="flex4">
-                <button role="button" aria-label="Sign in with Google" class="borderbox flex4 button-sign">
-                    <img class="icon" src="./images/Google-icon.png" alt="icon">
-                    <p>Sign up with Google</p>
-                </button>
-                <button role="button" aria-label="Sign in with Google" class="borderbox flex4 button-sign">
-                    <img class="icon" src="./images/email.png" alt="icon">
-                    <p>Sign up with Email</p>
-                </button>
-            </div>
-            <!-- sign in form -->
-            <p class="or"><b>- OR -</b></p>
-            <form action="login.php" method="POST">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <section class="box2">
+            <form id="signin-form" action="login.php" method="POST" aria-labelledby="signin-heading">
+                <h1 id="signin-heading">Sign In To FASCO</h1>
+                
+                <!-- Social Sign In Buttons -->
+                <div class="social-signin flex4">
+                    <button type="button" aria-label="Sign in with Google" class="borderbox flex4 button-sign">
+                        <img class="icon" src="./images/Google-icon.png" alt="Google icon">
+                        Sign up with Google
+                    </button>
+                    <button type="button" aria-label="Sign in with Email" class="borderbox flex4 button-sign">
+                        <img class="icon" src="./images/email.png" alt="Email icon">
+                        Sign up with Email
+                    </button>
+                </div>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <p class="or" aria-hidden="true"><b>- OR -</b></p>
+
+                <!-- Form Fields -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" 
+                        placeholder="Enter your email" 
+                        autocomplete="email" 
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" 
+                        placeholder="Enter your password" 
+                        autocomplete="current-password"
+                        required>
+                </div>
 
                 <div class="buttoncontainer">
                     <button type="submit" class="button-sign2">Sign In</button>
@@ -51,7 +72,11 @@
             <p class="term">FASCO Terms & Conditions</p>
         </section>
     </main>
-    <footer></footer>
+    <footer class="margin footer">
+        <div class="copyright">
+            <p>&copy; 2022 FASCO. All Rights Reserved.</p>
+        </div>
+    </footer>
     
 </body>
 </html>

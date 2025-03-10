@@ -18,8 +18,8 @@
             </ul>
         </nav>
         <!-- mian navigation part -->
-        <section class="margin">
-            <Nav class="header" id="navigation">
+        <div class="margin header" role="banner">
+            <nav class="header" id="navigation" role="navigation">
                 <div><h1>FASCO</h1></div>
                 <nav class="dropdown" aria-label="Main Navigation">
                     <div><button class="dropbtn">☰</button>        
@@ -37,8 +37,8 @@
                     <i class="fas fa-shopping-cart"></i>  
                     <i class="fas fa-user"></i> 
                 </div>
-            </Nav>
-        </section>
+            </nav>
+        </div>
     </header>
     
     <main>
@@ -46,8 +46,8 @@
         <section id="shop" class="productsdl margin margintop" aria-label="product details">
             <div class="p-image" aria-label="picture with details for products">
                 <div class="swiper-container">
-                    <div class="swiper ">
-                        <img src="./images/div.swiper-slide-5.png" alt="dress details">
+                    <div class="swiper" role="list">
+                        <img src="./images/div.swiper-slide-5.png" alt="dress details view 1">
                         <img src="./images/div.swiper-slide-5.png" alt="dress details">
                         <img src="./images/div.swiper-slide-5.png" alt="dress details">
                         <img src="./images/div.swiper-slide-5.png" alt="dress details">
@@ -62,19 +62,22 @@
                 </div>
             </div>
             <div class="p-inf">
-                <p class="grey">fasco</p>
-                <div class="flex" aria-label="New products">
-                    <h2 class="blod">Denim Jacket</h2>
-                    <i class="fa-regular fa-star alineselfcenter"></i>
-
+                <div itemscope itemtype="https://schema.org/Product">
+                    <p class="grey" itemprop="brand">fasco</p>
+                    <div class="flex" aria-label="New products">
+                        <h2 class="bold" itemprop="name">Denim Jacket</h2>
+                        <i class="fa-regular fa-star alineselfcenter"></i>
+                    </div>
                 </div>
-                <div class="stars">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <span>(3)</span>
+                <div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>(3)</span>
+                    </div>
                 </div>
                 <div class="flex1 blod">
                     <h3 aria-label="price now">$39.00</h3>
@@ -93,26 +96,26 @@
                 <img src="./images/redbar.png" alt="icon">
                 <P class="blod">Size: M</P>
                 <div class="flex1" aria-label="choose the size" role="list">
-                    <button class="border" role="listitem">M</button>
-                    <button class="border" role="listitem">L</button>
-                    <button class="border" role="listitem">XL</button>
-                    <button class="border" role="listitem">XXL</button>
+                    <button class="border">M</button>
+                    <button class="border">L</button>
+                    <button class="border">XL</button>
+                    <button class="border">XXL</button>
                 </div>
                 <p> <b>Color:</b> blue</p>
                 <div class="colorchoose" aria-label="Choose a color" role="list">
-                    <button class="button3" role="listitem" aria-label="Color: Light Blue">
+                    <button class="button3" aria-label="Color: Light Blue">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="15" cy="15" r="14" fill="lightblue"/>
                         </svg>
                     </button>
                 
-                    <button class="button3" role="listitem" aria-label="Color: Black">
+                    <button class="button3" aria-label="Color: Black">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="15" cy="15" r="14" fill="black" stroke="white" stroke-width="1"/>
                         </svg>
                     </button>
                 
-                    <button class="button3" role="listitem" aria-label="Color: Pink">
+                    <button class="button3" aria-label="Color: Pink">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="15" cy="15" r="14" fill="pink"/>
                         </svg>
@@ -120,13 +123,13 @@
                 </div>
                 <p>Quannity</p>
                 <!-- add aria-label for shopping -->
-                <div class="flex1 marginbottom">
-                    <div class="flex" aria-label="choose the Quannity">
-                        <button aria-label="add one item" class="border">-</button>
-                        <p aria-label="number of the item" class="alineselfcenter">1</p>
-                        <button aria-label="remove one item" class="border">+</button>
+                <div class="quantity-selector flex1 marginbottom">
+                    <div class="flex" aria-label="choose the Quantity">
+                        <button aria-label="decrease quantity" class="border" type="button">-</button>
+                        <span aria-label="current quantity" class="alineselfcenter" role="status">1</span>
+                        <button aria-label="increase quantity" class="border" type="button">+</button>
                     </div>
-                    <button class="border addcart" role="button"><b>Add to cart</b></button>
+                    <button class="border addcart" type="button" aria-label="Add to shopping cart"><b>Add to cart</b></button>
                 </div>
                 <div class="flex1 marginbottom">
                     <img class="icons" src="./images/exchangeicon.png" alt="icon">
@@ -148,7 +151,6 @@
                     <img src="./images/trustbag.png" alt="icon">
                     <p><b>Guarantee safe & secure checkout</b></p>
                 </div>
-
             </div> 
         </section>       
         <!-- packages part -->
@@ -221,17 +223,16 @@
 
     <footer class="margin footer" aria-label="Footer Section">
         <div class="brands">
-            <div><p>FASCO</p>
+            <div><p aria-label="Brand name">FASCO</p>
         </div>
         <nav class="dropdown" aria-label="Footer Navigation">
-            <div><button class="dropbtn">☰</button>
-                <div class="dropdown-content" aria-label="Toggle Menu">
-                    <a href="./index.html" aria-label="Navigation Menu">Home</a>
+            <div><button class="dropbtn" aria-label="Toggle menu">☰</button>
+                <div class="dropdown-content" role="menu">
+                    <a href="./index.html" role="menuitem">Home</a>
                     <a href="#shop">Shop</a>
                     <a href="#packages">Products</a>
                     <a href="./sign-in.html">Sign in</a>
                 </div>
-                
             </div>  
         </nav>
         </div>

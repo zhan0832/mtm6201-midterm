@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #222;
+    --secondary-color: rgb(254, 254, 254);
+    --red-color: rgb(159, 0, 0);
+    --grey-color: rgb(149, 147, 147);
+    --blue-color: rgb(105, 148, 250);
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --section-padding: 3rem 0;
+    --container-margin: 0 3rem;
+    --transition-speed: 0.3s;
+    --border-radius: 5px;
+    --max-width: 1200px;
+}
+
+/* Basic Reset */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box-middle > :not(:last-child) {
+    flex-grow: 1;
+}
+
+.box-middle > h2,
+.box-middle > p {
+    margin: 0;
+}
+
+*:before {
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --container-margin: 0 8rem;
+    }
+    
+    html {
+        font-size: 14px;
+    }
+
+    /* Group related media query styles */
+    /* Navigation Styles */
+    .header,
+    .dropdown-content,
+    .dropdown:hover {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Hide mobile elements */
+    .dropbtn {
+        display: none;
+    }
+} 
+
+/* Add consistent transition properties */
+.button,
+.button2,
+.button3,
+.nav-arrows span,
+#follow-us img {
+    transition: all var(--transition-speed) ease;
+} 
+
+/* Improve focus styles */
+:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Improve skip links */
+.skip-links a:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+} 
+
+/* Use hardware acceleration for animations */
+.nav-arrows span:hover,
+.button:hover {
+    transform: scale(1.1);
+    will-change: transform;
+} 

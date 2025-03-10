@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Home</title>
-    <meta itemprop="name" content="FASCO Home">
 </head>
 <body>
     <header>
@@ -19,13 +17,13 @@
             </ul>
         </nav>
     <div class="margin header" role="banner">
-        <div class="fasco"  itemprop="name" content="FASCO Home"><h1>FASCO</h1></div>
+        <div class="fasco"><h1>FASCO</h1></div>
         <!-- mian navigation -->
         <nav class="dropdown" role="navigation" aria-label="Main Navigation" id="navigation"> 
-            <div><button class="dropbtn" aria-controls="menu">☰</button>
+            <div><button class="dropbtn">☰</button>
                 
                 <div class="dropdown-content" role="menu">
-                    <a href="#newarrivals" role="menuitem">Home</a></li>
+                    <a href="#newarrivals" role="menuitem">Home</a>
                     <a href="./deals.html" role="menuitem">Deals</a>
                     <a href="#newarrivals" role="menuitem">New Arrivals</a>
                     <a href="#packages" role="menuitem">Packages</a>
@@ -40,7 +38,7 @@
     <main>
         <!-- Banner part -->
         <section id="banner" class="large margin" aria-label="Banner Section">
-            <div class="banner-image hidden"><img src="./images/banner-1.png" alt="Fashion sale banner"></div>
+            <div class="banner-image hidden"><img src="./images/banner-1.png" alt="Fashion sale banner" width="800" height="600"></div>
             <div class="box-middle">
                 <!-- Same image different size -->
             <picture>
@@ -64,12 +62,12 @@
             </div>  
             <div class="banner-image hidden"><img src="./images/banner-3.png" alt="Fashion sale banner"></div>  
         </section>
-        <section class="brands margin" role="list">
-            <p role="listitem">CHANEL</p>
-            <p role="listitem">LOUIS VUITTON</p>
-            <p role="listitem">PRADA</p>
-            <p role="listitem">Calvin Klein</p>
-            <p role="listitem">DENIM</p>
+        <section class="brands margin">
+            <p>CHANEL</p>
+            <p>LOUIS VUITTON</p>
+            <p>PRADA</p>
+            <p>Calvin Klein</p>
+            <p>DENIM</p>
         </section>
         <!-- deals part -->
         <section id="deals" class="box" aria-label="Deals of the Month section">
@@ -77,7 +75,7 @@
                 <h2 id="deals-details">Deals Of The Month</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 <button class="button" aria-label="Buy Now">Buy Now</button>
-                <div class="timer clearfix"><img src="./images/timer.png" alt="timer">
+                <div class="timer clearfix"><img src="./images/timer.png" alt="Countdown timer for deals">
                 </div>
             </div>
             <div class="slider-container">
@@ -110,11 +108,13 @@
                              
             </nav>
             <div class="container" aria-label="product details">
-                <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Brand">
-                    <img itemprop="image" aria-label="Woman's dress" class="clearfix" src="./images/newarrivals.png" alt="dress">
+                <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
+                    <img itemprop="image" aria-label="Woman's dress" class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
-                        <h3>Shiny Dress</h3>
-                            <div class="stars" itemprop="AggregateRating">
+                        <h3 itemprop="name">Shiny Dress</h3>
+                            <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                <meta itemprop="ratingValue" content="5">
+                                <meta itemprop="reviewCount" content="4100">
                                 <span>⭐</span>
                                 <span>⭐</span>
                                 <span>⭐</span>
@@ -122,18 +122,20 @@
                                 <span>⭐</span>
                             </div>
                     </div>
-                    <p class="grey ak">AI KARAM</p>
-                    <p>(4.1k) customer Reviews</p>
+                    <p itemprop="brand" class="grey ak">AI KARAM</p>
+                    <p itemprop="reviewCount">(4.1k) customer Reviews</p>
                     <div class="newdress">
-                        <p aria-label="Price">$95.50</p>
+                        <p itemprop="price" content="95.50" aria-label="Price">$95.50</p>
                         <p class="red">Almost Sold Out</p>
                     </div>    
                 </div>
-                <div class="newarrivalsbox box">
-                    <img itemprop="image"  class="clearfix" src="./images/newarrivals.png" alt="dress">
+                <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
+                    <img itemprop="image"  class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
-                        <h3>Shiny Dress</h3>
-                            <div class="stars" itemprop="AggregateRating">
+                        <h3 itemprop="name">Shiny Dress</h3>
+                            <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                <meta itemprop="ratingValue" content="5">
+                                <meta itemprop="reviewCount" content="4100">
                                 <span>⭐</span>
                                 <span>⭐</span>
                                 <span>⭐</span>
@@ -141,18 +143,20 @@
                                 <span>⭐</span>
                             </div>
                     </div>
-                    <p class="grey ak">AI KARAM</p>
-                    <p>(4.1k) customer Reviews</p>
+                    <p itemprop="brand" class="grey ak">AI KARAM</p>
+                    <p itemprop="reviewCount">(4.1k) customer Reviews</p>
                     <div class="newdress">
-                        <p aria-label="Price">$95.50</p>
+                        <p itemprop="price" content="95.50" aria-label="Price">$95.50</p>
                         <p class="red">Almost Sold Out</p>
                     </div>    
                 </div>
-                <div class="newarrivalsbox box">
-                    <img itemprop="image"  class="clearfix" src="./images/newarrivals.png" alt="dress">
+                <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
+                    <img itemprop="image"  class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
-                        <h3>Shiny Dress</h3>
-                            <div class="stars" itemprop="AggregateRating">
+                        <h3 itemprop="name">Shiny Dress</h3>
+                            <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                <meta itemprop="ratingValue" content="5">
+                                <meta itemprop="reviewCount" content="4100">
                                 <span>⭐</span>
                                 <span>⭐</span>
                                 <span>⭐</span>
@@ -160,18 +164,20 @@
                                 <span>⭐</span>
                             </div>
                     </div>
-                    <p class="grey ak">AI KARAM</p>
-                    <p>(4.1k) customer Reviews</p>
+                    <p itemprop="brand" class="grey ak">AI KARAM</p>
+                    <p itemprop="reviewCount">(4.1k) customer Reviews</p>
                     <div class="newdress">
-                        <p aria-label="Price">$95.50</p>
+                        <p itemprop="price" content="95.50" aria-label="Price">$95.50</p>
                         <p class="red">Almost Sold Out</p>
                     </div>    
                 </div>
-                <div class="newarrivalsbox box">
-                    <img itemprop="image" class="clearfix" src="./images/newarrivals.png" alt="dress">
+                <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
+                    <img itemprop="image" class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
-                        <h3>Shiny Dress</h3>
-                            <div class="stars" itemprop="AggregateRating">
+                        <h3 itemprop="name">Shiny Dress</h3>
+                            <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                <meta itemprop="ratingValue" content="5">
+                                <meta itemprop="reviewCount" content="4100">
                                 <span>⭐</span>
                                 <span>⭐</span>
                                 <span>⭐</span>
@@ -179,18 +185,20 @@
                                 <span>⭐</span>
                             </div>
                     </div>
-                    <p class="grey ak">AI KARAM</p>
-                    <p>(4.1k) customer Reviews</p>
+                    <p itemprop="brand" class="grey ak">AI KARAM</p>
+                    <p itemprop="reviewCount">(4.1k) customer Reviews</p>
                     <div class="newdress">
-                        <p aria-label="Price">$95.50</p>
+                        <p itemprop="price" content="95.50" aria-label="Price">$95.50</p>
                         <p class="red">Almost Sold Out</p>
                     </div>    
                 </div>
-                <div class="newarrivalsbox box">
-                    <img itemprop="image" class="clearfix" src="./images/newarrivals.png" alt="dress">
+                <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
+                    <img itemprop="image" class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
-                        <h3>Shiny Dress</h3>
-                            <div class="stars" itemprop="AggregateRating">
+                        <h3 itemprop="name">Shiny Dress</h3>
+                            <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                <meta itemprop="ratingValue" content="5">
+                                <meta itemprop="reviewCount" content="4100">
                                 <span>⭐</span>
                                 <span>⭐</span>
                                 <span>⭐</span>
@@ -198,18 +206,20 @@
                                 <span>⭐</span>
                             </div>
                     </div>
-                    <p class="grey ak">AI KARAM</p>
-                    <p>(4.1k) customer Reviews</p>
+                    <p itemprop="brand" class="grey ak">AI KARAM</p>
+                    <p itemprop="reviewCount">(4.1k) customer Reviews</p>
                     <div class="newdress">
-                        <p aria-label="Price">$95.50</p>
+                        <p itemprop="price" content="95.50" aria-label="Price">$95.50</p>
                         <p class="red">Almost Sold Out</p>
                     </div>    
                 </div>
-                <div class="newarrivalsbox box">
-                    <img itemprop="image" class="clearfix" src="./images/newarrivals.png" alt="dress">
+                <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
+                    <img itemprop="image" class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
-                        <h3>Shiny Dress</h3>
-                            <div class="stars" itemprop="AggregateRating">
+                        <h3 itemprop="name">Shiny Dress</h3>
+                            <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                <meta itemprop="ratingValue" content="5">
+                                <meta itemprop="reviewCount" content="4100">
                                 <span>⭐</span>
                                 <span>⭐</span>
                                 <span>⭐</span>
@@ -217,10 +227,10 @@
                                 <span>⭐</span>
                             </div>
                     </div>
-                    <p class="grey ak">AI KARAM</p>
-                    <p>(4.1k) customer Reviews</p>
+                    <p itemprop="brand" class="grey ak">AI KARAM</p>
+                    <p itemprop="reviewCount">(4.1k) customer Reviews</p>
                     <div class="newdress">
-                        <p aria-label="Price">$95.50</p>
+                        <p itemprop="price" content="95.50" aria-label="Price">$95.50</p>
                         <p class="red">Almost Sold Out</p>
                     </div>    
                 </div>   
@@ -244,22 +254,22 @@
                 </div>
             </div>
             <div class="highquality">
-                <div class="flex3"><img class="icon" src="./images/icon.png" alt="icon">
+                <div class="flex3"><img class="icon" src="./images/icon.png" alt="High quality product icon">
                     <div><p>High Quality</p>
                          <p class="grey">crafted from top materials</p>
                     </div>
                 </div>
-                <div class="flex3"><img class="icon" src="./images/icon.png" alt="icon">
+                <div class="flex3"><img class="icon" src="./images/icon.png" alt="High quality product icon">
                     <div><p>High Quality</p>
                          <p class="grey">crafted from top materials</p>
                     </div>
                 </div>
-                <div class="flex3"><img class="icon" src="./images/icon.png" alt="icon">
+                <div class="flex3"><img class="icon" src="./images/icon.png" alt="High quality product icon">
                     <div><p>High Quality</p>
                          <p class="grey">crafted from top materials</p>
                     </div>
                 </div>
-                <div class="flex3"><img class="icon" src="./images/icon.png" alt="icon">
+                <div class="flex3"><img class="icon" src="./images/icon.png" alt="High quality product icon">
                     <div><p>High Quality</p>
                         <p class="grey">crafted from top materials</p>
                     </div>
@@ -268,65 +278,51 @@
         </section>       
         <!-- follow us part -->
         <section class="margintop">
-            <div class="margin h2center" aria-label="Follow Us On Instagram section">
+            <div class="margin h2center">
                 <h2>Follow Us On Instagram</h2>
                 <p class="grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
             </div>
             <div class="brands" id="follow-us" >
                 <div><!-- Same image different size -->
                     <picture>
-                        <source srcset="./images/follow-us-1-180.png"
-                        media="(min-width: 760px)"/>
-                        <source srcset="./images/follow-us-1-270.png"
-                        media="(min-width: 320px)"/>
+                        <source srcset="./images/follow-us-1-180.png" media="(min-width: 760px)"/>
+                        <source srcset="./images/follow-us-1-270.png" media="(min-width: 320px)"/>
                         <img src="./images/follow-us-1.png" alt="coats">
                     </picture></div>
                 <div><picture>
-                    <source srcset="./images/follow-us-2-160.png"
-                    media="(min-width: 760px)"/>
-                    <source srcset="./follow-us-2-250.png"
-                    media="(min-width: 320px)"/>
+                    <source srcset="./images/follow-us-2-160.png" media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-2-250.png" media="(min-width: 320px)"/>
                     <img src="./images/follow-us-2.png" alt="coats">
                 </picture></div>
                 <div><picture>
-                    <source srcset="./images/follow-us-1-180.png"
-                    media="(min-width: 760px)"/>
-                    <source srcset="./images/follow-us-1-270.png"
-                    media="(min-width: 320px)"/>
+                    <source srcset="./images/follow-us-1-180.png" media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-1-270.png" media="(min-width: 320px)"/>
                     <img src="./images/follow-us-1.png" alt="coats">
                 </picture></div>
                 <div class="hidden"><picture>
-                    <source srcset="./images/follow-us-2-160.png"
-                    media="(min-width: 760px)"/>
-                    <source srcset="./follow-us-2-250.png"
-                    media="(min-width: 320px)"/>
+                    <source srcset="./images/follow-us-2-160.png" media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-2-250.png" media="(min-width: 320px)"/>
                     <img src="./images/follow-us-2.png" alt="coats">
                 </picture></div>
                 <div class="hidden"><picture>
-                    <source srcset="./images/follow-us-1-180.png"
-                    media="(min-width: 760px)"/>
-                    <source srcset="./images/follow-us-1-270.png"
-                    media="(min-width: 320px)"/>
+                    <source srcset="./images/follow-us-1-180.png" media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-1-270.png" media="(min-width: 320px)"/>
                     <img src="./images/follow-us-1.png" alt="coats">
                 </picture></div>
                 <div class="hidden"><picture>
-                    <source srcset="./images/follow-us-2-160.png"
-                    media="(min-width: 760px)"/>
-                    <source srcset="./images/follow-us-2-250.png"
-                    media="(min-width: 320px)"/>
+                    <source srcset="./images/follow-us-2-160.png" media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-2-250.png" media="(min-width: 320px)"/>
                     <img src="./images/follow-us-2.png" alt="coats">
                 </picture></div>
                 <div class="hidden"><picture>
-                    <source srcset="./images/follow-us-1-180.png"
-                    media="(min-width: 760px)"/>
-                    <source srcset="./images/follow-us-1-270.png"
-                    media="(min-width: 320px)"/>
+                    <source srcset="./images/follow-us-1-180.png" media="(min-width: 760px)"/>
+                    <source srcset="./images/follow-us-1-270.png" media="(min-width: 320px)"/>
                     <img src="./images/follow-us-1.png" alt="coats">
                 </picture></div>
             </div>
-        </div>
+        </section>
         <!-- customers say part -->
-        <div class="customers" aria-label="Reviews section">
+        <section class="customers" aria-label="Reviews section">
             <div class="h2center">
                 <div><h2>This Is Our customers Say</h2></div>
                 <p class="grey">Sed ut perspiciatis unde omnis iste natus error sit </p>
@@ -389,7 +385,7 @@
             <div class="hidden"><img src="./images/subscribe.png" alt="banner"></div>
             <div class="h2center subscribetext"><h2>Subscribe To Our Newsletter</h2>
                 <p class="grey"  aria-label="Subscription Description">Sed ut perspiciatis unde omnis iste natus error sit </p>
-                <button class="button" aria-label="Subscribe Now">Subscribe Now</button>
+                <button class="button" type="button" aria-label="Subscribe to newsletter">Subscribe Now</button>
             </div>
             
         </section>
