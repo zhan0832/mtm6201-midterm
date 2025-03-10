@@ -172,7 +172,8 @@ img{
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;  
+    
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 2rem 0;
@@ -446,7 +447,7 @@ img{
 /* Sign-in page style */
 .box2 h1{
     font-size: 2.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0;
 }
 .box2 h2{
     font-size: 2rem;
@@ -462,6 +463,7 @@ img{
 .flex4 .icon{
     width: 1.5rem;
     height: 1.5rem;
+    margin-right: 0.5rem;
 }
 
 .box1 img {
@@ -515,6 +517,8 @@ input{
 .buttoncontainer{
     display: flex;
     flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 .button-sign2:hover {
     background-color: var(--primary-color);
