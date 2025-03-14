@@ -38,9 +38,12 @@
     <main>
         <!-- Banner part -->
         <section id="banner" class="large margin" aria-label="Banner Section">
-            <div class="banner-image hidden"><img src="./images/banner-1.png" alt="Fashion sale banner" width="800" height="600"></div>
+            <div class="banner-image hidden">
+                <img srcset="./images/banner-1.png,
+                ./images/banner-1-2x.png 2x" 
+                src="./images/banner-1.png" alt="Fashion sale banner" width="800" height="600"></div>
             <div class="box-middle">
-                <!-- Same image different size -->
+                <!-- Same image different size and same size with different resolution -->
             <picture>
                 <source srcset="./images/banner-2-400.png"
                 media="(min-width: 760px)"/>
@@ -60,7 +63,10 @@
                     <img src="./images/banner-4.png" alt="Fashion sale banner">
                 </picture>
             </div>  
-            <div class="banner-image hidden"><img src="./images/banner-3.png" alt="Fashion sale banner"></div>  
+            <div class="banner-image hidden">
+                <img srcset="./images/banner-3.png,
+                ./images/banner-3-2x.png 2x"
+                src="./images/banner-3.png" alt="Fashion sale banner"></div>  
         </section>
         <section class="brands margin">
             <p>CHANEL</p>
@@ -80,9 +86,13 @@
             </div>
             <div class="slider-container">
                 <div class="dotm-img margin">
-                    <img class="slide" src="./images/deals-1.png" alt="dress">
-                    <img class="slide"  src="./images/deals-1.png" alt="dress">
-                    <img class="slide" src="./images/deals-1.png" alt="dress">
+                    <!-- same size with different resolution -->
+                    <img srcset="./images/deals-1.png,
+                    ./images/deals-1-2x.png 2x" src="./images/deals-1.png" alt="dress" class="slide">
+                    <img srcset="./images/deals-1.png,
+                    ./images/deals-1-2x.png 2x" src="./images/deals-1.png" alt="dress" class="slide">
+                    <img srcset="./images/deals-1.png,
+                    ./images/deals-1-2x.png 2x" src="./images/deals-1.png" alt="dress" class="slide">
                 </div>
             </div>
 
@@ -109,7 +119,9 @@
             </nav>
             <div class="container" aria-label="product details">
                 <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
-                    <img itemprop="image" aria-label="Woman's dress" class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
+                    <!-- same size with different resolution -->
+                    <img itemprop="image" aria-label="Woman's dress" class="clearfix" srcset="./images/newarrivals.png,
+                    ./images/newarrivals-2x.png 2x" src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
                         <h3 itemprop="name">Shiny Dress</h3>
                             <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
@@ -130,7 +142,9 @@
                     </div>    
                 </div>
                 <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
-                    <img itemprop="image"  class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
+                    <img itemprop="image"  class="clearfix" srcset="./images/newarrivals.png,
+                    ./images/newarrivals-2x.png 2x"
+                    src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
                         <h3 itemprop="name">Shiny Dress</h3>
                             <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
@@ -151,7 +165,9 @@
                     </div>    
                 </div>
                 <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
-                    <img itemprop="image"  class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
+                    <img itemprop="image"  class="clearfix" srcset="./images/newarrivals.png,
+                    ./images/newarrivals-2x.png 2x"
+                    src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
                         <h3 itemprop="name">Shiny Dress</h3>
                             <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
@@ -172,7 +188,9 @@
                     </div>    
                 </div>
                 <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
-                    <img itemprop="image" class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
+                    <img itemprop="image" class="clearfix" srcset="./images/newarrivals.png,
+                    ./images/newarrivals-2x.png 2x"
+                    src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
                         <h3 itemprop="name">Shiny Dress</h3>
                             <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
@@ -193,7 +211,9 @@
                     </div>    
                 </div>
                 <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
-                    <img itemprop="image" class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
+                    <img itemprop="image" class="clearfix" srcset="./images/newarrivals.png,
+                    ./images/newarrivals-2x.png 2x"
+                    src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
                         <h3 itemprop="name">Shiny Dress</h3>
                             <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
@@ -214,7 +234,9 @@
                     </div>    
                 </div>
                 <div class="newarrivalsbox box" itemscope itemtype="https://schema.org/Product">
-                    <img itemprop="image" class="clearfix" src="./images/newarrivals.png" alt="Shiny dress product image">
+                    <img itemprop="image" class="clearfix" srcset="./images/newarrivals.png,
+                    ./images/newarrivals-2x.png 2x"
+                    src="./images/newarrivals.png" alt="Shiny dress product image">
                     <div class="newdress">
                         <h3 itemprop="name">Shiny Dress</h3>
                             <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
@@ -329,7 +351,9 @@
             </div>
             <div class="a1" aria-label="customers Reviews">
                 <div class="brands">
-                    <div class="person-photo"><img  src="./images/customersay.png" alt="jamsk"></div>
+                    <div class="person-photo">
+                        <img srcset="./images/customersay.png,
+                        ./images/customersay-2x.png 2x" src="./images/customersay.png" alt="jamsk"></div>
                     <div class="p1">
                         <p class="grey" aria-label="rewiew form K">Sed ut perspiciatis unde omnis iste natus error sit, Sed ut perspiciatis unde omnis iste natus error sit </p>
                         <div class="stars">
@@ -344,7 +368,8 @@
                     </div>
                 </div>
                 <div class="brands">
-                    <div class="person-photo"><img  src="./images/customersay.png" alt="jamsk"></div>
+                    <div class="person-photo"><img srcset="./images/customersay.png,
+                        ./images/customersay-2x.png 2x" src="./images/customersay.png" alt="jamsk"></div>
                     <div class="p1">
                         <p class="grey" aria-label="rewiew form K">Sed ut perspiciatis unde omnis iste natus error sit, Sed ut perspiciatis unde omnis iste natus error sit </p>
                         <div class="stars">
@@ -359,7 +384,8 @@
                     </div>
                 </div>
                 <div class="brands">
-                    <div class="person-photo"><img  src="./images/customersay.png" alt="jamsk"></div>
+                    <div class="person-photo"><img srcset="./images/customersay.png,
+                        ./images/customersay-2x.png 2x" src="./images/customersay.png" alt="jamsk"></div>
                     <div class="p1">
                         <p class="grey" aria-label="rewiew form K">Sed ut perspiciatis unde omnis iste natus error sit, Sed ut perspiciatis unde omnis iste natus error sit </p>
                         <div class="stars">
@@ -382,7 +408,8 @@
         </section>
         <!-- subscribe part -->
         <section class="subscribe margintop" aria-label="Subscribe to Newsletter">
-            <div class="hidden"><img src="./images/subscribe.png" alt="banner"></div>
+            <div class="hidden"><img srcset="./images/subscribe.png,
+                ./images/subscribe-2x.png 2x" src="./images/subscribe.png" alt="banner"></div>
             <div class="h2center subscribetext"><h2>Subscribe To Our Newsletter</h2>
                 <p class="grey"  aria-label="Subscription Description">Sed ut perspiciatis unde omnis iste natus error sit </p>
                 <button class="button" type="button" aria-label="Subscribe to newsletter">Subscribe Now</button>
